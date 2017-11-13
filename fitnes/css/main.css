@@ -4835,6 +4835,8 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
+  -ms-background-position-x: center;
+  background-position-x: center;
   font-family: 'Nunito', sans-serif;
   color: #fff;
 }
