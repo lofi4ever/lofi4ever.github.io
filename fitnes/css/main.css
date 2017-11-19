@@ -4821,6 +4821,65 @@ a {
   transform: rotate(-90deg);
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?ur11m2");
+  src: url("../fonts/icomoon.eot?ur11m2#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ur11m2") format("truetype"), url("../fonts/icomoon.woff?ur11m2") format("woff"), url("../fonts/icomoon.svg?ur11m2#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-f1:before {
+  content: "\e900";
+}
+
+.icon-f2:before {
+  content: "\e901";
+}
+
+.icon-f3:before {
+  content: "\e902";
+}
+
+.icon-f4:before {
+  content: "\e903";
+}
+
+.icon-f5:before {
+  content: "\e904";
+}
+
+.icon-f6:before {
+  content: "\e905";
+}
+
+.icon-f7:before {
+  content: "\e906";
+}
+
+.icon-f8:before {
+  content: "\e907";
+}
+
+.icon-f9:before {
+  content: "\e908";
+}
+
 html,
 body {
   height: 100%;
@@ -4834,11 +4893,24 @@ header {
   background-image: url("../img/header-bg.jpg");
   -webkit-background-size: cover;
   background-size: cover;
-  position: relative;
-  -ms-background-position-x: center;
+  background-repeat: no-repeat;
   background-position-x: center;
+  position: relative;
   font-family: 'Nunito', sans-serif;
   color: #fff;
+}
+
+header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10vh solid rgba(253, 99, 77, 0.4);
+  border-left: 100vw solid transparent;
+  z-index: 10;
 }
 
 .wrapper {
@@ -4864,6 +4936,23 @@ header {
   padding-left: 50px;
   padding-right: 65px;
   position: relative;
+}
+
+.logo-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.logo-wrap span {
+  font-size: 37px;
+  margin-right: 12px;
+  color: #fd634e;
 }
 
 .logo-wrap__text {
@@ -4921,17 +5010,21 @@ nav {
   position: absolute;
   bottom: 145px;
   left: 115px;
+  text-align: right;
+  padding-right: 10px;
 }
 
 .header-caption__lg {
   font-size: 40px;
   font-weight: 400;
+  line-height: 40px;
 }
 
 .header-caption__sm {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
+  margin-right: 50px;
 }
 
 .header-caption__lg:after,
@@ -4987,6 +5080,11 @@ nav {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 20px;
+}
+
+.feature-card__icon {
+  font-size: 35px;
+  margin-bottom: 22px;
 }
 
 .feature-card__cap {
@@ -5050,6 +5148,13 @@ nav {
   flex-grow: 7;
 }
 
+.card__icon {
+  font-size: 17px;
+  color: #e3e9e9;
+  margin: 18px 0;
+  text-align: center;
+}
+
 .card__content {
   margin: 20px 0;
 }
@@ -5080,6 +5185,8 @@ nav {
 .card__link {
   color: #a1c927;
   text-decoration: underline;
+  display: block;
+  text-align: center;
 }
 
 .img-wrap {
@@ -5091,11 +5198,73 @@ nav {
   -webkit-flex-grow: 13;
   -ms-flex-positive: 13;
   flex-grow: 13;
+  position: relative;
 }
 
 .img-wrap img {
   width: 100%;
   display: block;
+}
+
+.img-descr {
+  position: absolute;
+  bottom: 9%;
+  color: #fff;
+  font-family: "OpenSans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.img-descr--right {
+  right: 8.4%;
+}
+
+.img-descr--left {
+  left: 5.4%;
+}
+
+.img-descr:after {
+  content: "\e904";
+  font-family: 'icomoon';
+  font-size: 23px;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+  color: #f7604c;
+}
+
+.img-descr span {
+  color: #f7604c;
+}
+
+.img-topline {
+  position: absolute;
+  top: 9%;
+  width: 100%;
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.img-topline div:last-child:after {
+  content: "\e905";
+  font-family: 'icomoon';
+  position: relative;
+  margin-left: 10px;
+  font-size: 19px;
+  color: #fff;
+  top: 5px;
 }
 
 .section-second {
@@ -5170,11 +5339,30 @@ nav {
   width: 100%;
 }
 
+.section-vertical-lg .card,
+.section-vertical-sm .card {
+  position: relative;
+}
+
 .section-vertical-lg .card__cap,
 .section-vertical-lg .card__text,
 .section-vertical-sm .card__cap,
 .section-vertical-sm .card__text {
   text-align: left;
+}
+
+.section-vertical-lg .card__icon,
+.section-vertical-sm .card__icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 32px;
+}
+
+.section-vertical-lg .card--shadow,
+.section-vertical-sm .card--shadow {
+  -webkit-box-shadow: inset -14px 0 62px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -14px 0 62px rgba(0, 0, 0, 0.2);
 }
 
 .section-vertical-colored {
@@ -5190,6 +5378,10 @@ nav {
 }
 
 .section-vertical-colored .card__text {
+  color: #fff;
+}
+
+.section-vertical-colored .card__icon {
   color: #fff;
 }
 
@@ -5244,7 +5436,6 @@ nav {
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 0;
   height: 0;
 }
@@ -5252,11 +5443,13 @@ nav {
 .banner:after {
   border-bottom: 15vh solid #0d1119;
   border-left: 100vw solid transparent;
+  right: 0;
 }
 
 .banner:before {
   border-bottom: 15vh solid #0d1119;
   border-right: 100vw solid transparent;
+  left: 0;
 }
 
 .banner__content {
@@ -5662,6 +5855,10 @@ footer .wrapper {
 
   .banner__content p {
     padding: 0;
+  }
+
+  .img-topline {
+    padding: 0 20px;
   }
 }
 
