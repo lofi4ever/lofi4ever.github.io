@@ -3988,6 +3988,7 @@ button.navbar-toggle .icon-bar {
   width: 274px;
   padding: 28px 20px;
   display: none;
+  text-align: center !important;
 }
 
 .form-apply--side input[type="text"],
@@ -3996,26 +3997,28 @@ button.navbar-toggle .icon-bar {
   margin-bottom: 8px;
   margin-left: 0;
   margin-left: 0;
+  margin-bottom: 5px;
+  width: 100% !important;
 }
 
 .form-apply--side textarea {
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   margin-bottom: 20px;
-  margin-left: 0;
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .form-apply--side input[type="submit"] {
-  position: static;
+  position: static !important;
 }
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 210px;
-  -webkit-transform: translateX(53%);
-  -ms-transform: translateX(53%);
-  transform: translateX(53%);
+  -webkit-transform: translateX(216%);
+  -ms-transform: translateX(216%);
+  transform: translateX(216%);
   z-index: 100;
 }
 
