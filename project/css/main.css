@@ -4146,14 +4146,6 @@ button.navbar-toggle .icon-bar {
 }
 
 @media only screen and (max-width: 768px) {
-  .header-menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
   .dropdown-menu {
     border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -4164,12 +4156,13 @@ button.navbar-toggle .icon-bar {
   }
 
   .map-container {
-    width: 100%;
-    height: 450px;
+    width: 50%;
+    height: 436px;
   }
 
   .contacts-box {
-    width: 100%;
+    width: 50%;
+    padding: 90px 0 100px 40px;
   }
 
   .form-apply {
@@ -4190,6 +4183,16 @@ button.navbar-toggle .icon-bar {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .header-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .logo h1 {
     font-size: 32px;
@@ -4204,11 +4207,13 @@ button.navbar-toggle .icon-bar {
   }
 
   .contacts-box {
-    padding: 96px 0 112px 30px;
+    padding: 70px 0 60px 30px;
+    width: 100%;
   }
 
   .map-container {
     height: 320px;
+    width: 100%;
   }
 
   .col-fl:nth-child(1) {
