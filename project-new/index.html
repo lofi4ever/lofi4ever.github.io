@@ -80,11 +80,11 @@
                 <span class="icon-bar"></span>
               </button>
               <ul class="menu-first">
-                <li><span class="key strong strong--accent">Gold: </span><span class="value"><span class="caret caret-up"></span> 300$</span></li>
-                <li><span class="key">Silver: </span><span class="value"><span class="caret"></span> 300$</span></li>
-                <li><span class="key">Platinum: </span><span class="value"><span class="caret caret-up"></span> 300$</span></li>
-                <li><span class="key strong">BTC: </span><span class="value"><span class="caret caret-up"></span> 300$</span></li>
-                <li><span class="key strong">ETH: </span><span class="value"><span class="caret caret-up"></span> 300$</span></li>
+                <li><span class="key strong strong--accent">Gold: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
+                <li><span class="key">Silver: </span><span class="value"><span class="caret"></span> 55 555,05$</span></li>
+                <li><span class="key">Platinum: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
+                <li><span class="key strong">BTC: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
+                <li><span class="key strong">ETH: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
               </ul>
               <ul class="menu-second">
                 <li class="menu-second__item"><a href="#" class="menu-second__link">Sign in</a></li>
@@ -157,12 +157,17 @@
     <section class="section-cards">
       <h2 class="section-caption">Leaders of sells</h2>
       <div class="button-group button-group--section">
-        <input type="radio" id="gold" name="filter" checked>
-        <label for="gold">Gold</label>
-        <input type="radio" id="silver" name="filter">
-        <label for="silver">Silver</label>
-        <input type="radio" id="platinum" name="filter">
-        <label for="platinum">Platinum</label>
+        <input type="radio" id="gold" value="gold" name="filter" checked>
+        <label class="hidden-xs" for="gold">Gold</label>
+        <input type="radio" id="silver" value="silver" name="filter">
+        <label class="hidden-xs" for="silver">Silver</label>
+        <input type="radio" id="platinum" value="platinum" name="filter">
+        <label class="hidden-xs" for="platinum">Platinum</label>
+        <select id="select-type" class="visible-inline-block-xs">
+          <option value="gold" checked>Gold</option>
+          <option value="silver">Silver</option>
+          <option value="platinum">Platinum</option>
+        </select>
       </div>
       <div class="container">
         <div class="row row-flex">
@@ -814,20 +819,26 @@
     <section class="section-bottomline">
       <div class="container">
         <div class="row row-flex">
-          <ul class="socials">
-            <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
-            <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-telegram"></i></a></li>
-          </ul>
-          <ul class="payment">
-            <li><a href="#" target="_blank"><img src="img/payment-1.png" alt="payment"></a></li>
-            <li><a href="#" target="_blank"><img src="img/payment-2.png" alt="payment"></a></li>
-            <li><a href="#" target="_blank"><img src="img/payment-3.png" alt="payment"></a></li>
-            <li><a href="#" target="_blank"><img src="img/payment-4.png" alt="payment"></a></li>
-            <li><a href="#" target="_blank"><img src="img/payment-5.png" alt="payment"></a></li>
-            <li><a href="#" target="_blank"><img src="img/payment-6.png" alt="payment"></a></li>
-          </ul>
+          <div class="list-wrap">
+            <div class="list-before">We are in social networks</div>
+            <ul class="socials">
+              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-telegram"></i></a></li>
+            </ul>
+          </div>
+          <div class="list-wrap">
+            <div class="list-before">Accepted for payment</div>
+            <ul class="payment">
+              <li><a href="#" target="_blank"><img src="img/payment-1.png" alt="payment"></a></li>
+              <li><a href="#" target="_blank"><img src="img/payment-2.png" alt="payment"></a></li>
+              <li><a href="#" target="_blank"><img src="img/payment-3.png" alt="payment"></a></li>
+              <li><a href="#" target="_blank"><img src="img/payment-4.png" alt="payment"></a></li>
+              <li><a href="#" target="_blank"><img src="img/payment-5.png" alt="payment"></a></li>
+              <li><a href="#" target="_blank"><img src="img/payment-6.png" alt="payment"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -860,8 +871,8 @@
 
 
   <!-- Google fonts start-->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
   <!-- Google fonts end-->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
