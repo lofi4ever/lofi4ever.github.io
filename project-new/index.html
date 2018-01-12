@@ -5,881 +5,461 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 </head>
 <body>
-  <div id="wrapper">
-    <header class="main-head">
-      <nav class="navbar navbar-toggleable-sm main-menu-line">
-        <div class="container">
-          <div class="row">
-            <div id="main-menu-wrapper">
-              <button id='main-menu-toggler' class="navbar-toggler navbar-toggler-left" type="button">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <div class="main-menu" id="main-menu">
-                <ul class="navbar-nav">
-                  <li class="main-menu__item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Gold <i class="fa fa-angle-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="main-menu__item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Silver <i class="fa fa-angle-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="main-menu__item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Platinum <i class="fa fa-angle-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">About Us</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">FAQ</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Delivery</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#">Contacts</a>
-                  </li>
-                  <li class="main-menu__item">
-                    <a class="main-menu__link" href="#"><span class="icon-icon2"></span> My Collection</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  
+  <header class="main-head">
+    <div class="wrapper">
+      <div class="header-info">
+        <div class="header-logo">
+          <img src="img/logo.svg" alt="Gramos">
         </div>
-      </nav>
-
-      <div class="topline">
-        <div class="container">
-          <div class="row">
-            <nav class="top-menu">
-              <button id='top-menu-toggler' class="navbar-toggler navbar-toggler-left" type="button" data-toggle="offcanvas">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <ul class="menu-first">
-                <li><span class="key strong strong--accent">Gold: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
-                <li><span class="key">Silver: </span><span class="value"><span class="caret"></span> 55 555,05$</span></li>
-                <li><span class="key">Platinum: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
-                <li><span class="key strong">BTC: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
-                <li><span class="key strong">ETH: </span><span class="value"><span class="caret caret-up"></span> 55 555,05$</span></li>
-              </ul>
-              <ul class="menu-second">
-                <li class="menu-second__item"><a href="#" class="menu-second__link">Sign in</a></li>
-                <li class="menu-second__item"><a href="#" class="menu-second__link">Sign Up</a></li>
-                <ul class="lang-switcher">
-                  <li class="lang-switcher__item active"><a href="#">en</a></li>
-                  <li class="lang-switcher__item"><a href="#">ru</a></li>
-                </ul>
-              </ul>
-            </nav>
-          </div>
+        <div class="header-cap">
+          оборудование для производства обуви и изделий из кожи
+        </div>
+        <div class="header-feedback header-feedback--email">
+          info@granucci.ru
+          <a href="#modal-email" data-toggle="modal"><span class="icon-icon1 feedback-icon"></span> <span class="underline">Написать нам</span></a>
+        </div>
+        <div class="header-feedback header-feedback--phone">
+          +7 (495) 767-15-33
+          <a href="#modal-call" data-toggle="modal"><span class="icon-icon2 feedback-icon"></span> <span class="underline underline--dashed">Заказать звонок</span></a>
         </div>
       </div>
-      
-      <div class="middle-line">
-        <div class="container">
-          <div class="row row-flex">
-            <img src="img/svg/logo.svg" alt="logo" class="logo">
-            <div class="phoneinfo">
-              <div class="phoneinfo__icon">
-                <span class="icon-icon3"></span>
-              </div>
-              <div class="phoneinfo__text">
-                Call us at
-                <a href="tel:3-725-669-9907"><span class="strong">+372 566 999 07</span></a>
-              </div>
-            </div>
-            <div class="searchform">
-              <input type="text" placeholder="What are we looking for" id="search">
-              <button type="submit"><span class="icon-icon1"></span></button>
-            </div>
-            <div class="basket">
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <div class="basket__count">0</div>
-              </div>
-              <div class="basket__text">Your basket is empty : (</div>
+      <div class="header-line">
+        <nav class="navbar" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="hamburger hamburger--spin navbar-toggle pull-left" data-toggle="collapse" data-target="#navbar1">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <div class="header-searchform">
+              <input type="text" placeholder="Поиск по сайту">
+              <button type="submit" class="search-submit"><span class="icon-icon3"></span></button>
+              <button class="search-settings"><span class="icon-icon4"></span></button>
             </div>
           </div>
-        </div>
+          <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="nav navbar-nav">
+              <li><a href="/">О компании</a></li>
+              <li><a href="/about.html">Услуги</a></li>
+              <li><a href="/services.html">Новости</a></li>
+              <li><a href="/">Информаиция</a></li>
+              <li><a href="/">Партнеры</a></li>
+              <li><a href="/">Видео</a></li>
+              <li><a href="/">Тех.документы</a></li>
+              <li><a href="/">Контакты</a></li>     
+            </ul>
+          </div>    
+        </nav>
       </div>
-    </header>
-    
-    <section class="banner">
-      <div class="container">
-        <div class="row row-flex">
-          <div class="banner__descr">
-            <h1 class="banner-caption">
-              <span class="strong">Eclat Capital -</span>
-              First dealer for the sale of precious metals for crypto currency
-            </h1>
-            <a href="#" class="btn">About Us</a>
-            <div class="dots-cont">
-              <div class="dots-cont__item">01</div>
-              <div class="dots-cont__item">02</div>
-              <div class="dots-cont__item">03</div>
-              <div class="dots-cont__item">04</div>
-            </div>
-          </div>
-          <div class="banner__slider owl-carousel">     
-            <div class="slider__item"><img src="img/bitcoin.jpg" alt="image"></div>
-            <div class="slider__item"><img src="img/bitcoin.jpg" alt="image"></div>
-            <div class="slider__item"><img src="img/bitcoin.jpg" alt="image"></div>
-            <div class="slider__item"><img src="img/bitcoin.jpg" alt="image"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-cards">
-      <h2 class="section-caption">Leaders of sells</h2>
-      <div class="button-group button-group--section">
-        <input type="radio" id="gold" value="gold" name="filter" checked>
-        <label class="hidden-xs" for="gold">Gold</label>
-        <input type="radio" id="silver" value="silver" name="filter">
-        <label class="hidden-xs" for="silver">Silver</label>
-        <input type="radio" id="platinum" value="platinum" name="filter">
-        <label class="hidden-xs" for="platinum">Platinum</label>
-        <select id="select-type" class="visible-inline-block-xs">
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="platinum">Platinum</option>
-        </select>
-      </div>
-      <div class="container">
-        <div class="row row-flex">
-
-          <div class="card" data-filter="gold">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="silver">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold" data-sale="-25%">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                2017 South Africa 1 oz
-                Gold Krugerrand BU
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 62%"></div>
-              </div>
-              <div class="card__value" data-type="eth">1,336.89</div>
-              <div class="card__value" data-type="btc">1,336.89</div>
-              <div class="card__value" data-type="eur">1,336.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                2017 South Africa 1 oz
-                Gold Krugerrand BU
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 62%"></div>
-              </div>
-              <div class="card__value" data-type="eth">1,336.89</div>
-              <div class="card__value" data-type="btc">1,336.89</div>
-              <div class="card__value" data-type="eur">1,336.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold" data-sale="Sale">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                2017 South Africa 1 oz
-                Gold Krugerrand BU
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 62%"></div>
-              </div>
-              <div class="card__value" data-type="eth">1,336.89</div>
-              <div class="card__value" data-type="btc">1,336.89</div>
-              <div class="card__value" data-type="eur">1,336.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="silver">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="platinum">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="silver">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold" data-sale="-25%">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                2017 South Africa 1 oz
-                Gold Krugerrand BU
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 62%"></div>
-              </div>
-              <div class="card__value" data-type="eth">1,336.89</div>
-              <div class="card__value" data-type="btc">1,336.89</div>
-              <div class="card__value" data-type="eur">1,336.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                2017 South Africa 1 oz
-                Gold Krugerrand BU
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 62%"></div>
-              </div>
-              <div class="card__value" data-type="eth">1,336.89</div>
-              <div class="card__value" data-type="btc">1,336.89</div>
-              <div class="card__value" data-type="eur">1,336.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold" data-sale="Sale">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                2017 South Africa 1 oz
-                Gold Krugerrand BU
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 62%"></div>
-              </div>
-              <div class="card__value" data-type="eth">1,336.89</div>
-              <div class="card__value" data-type="btc">1,336.89</div>
-              <div class="card__value" data-type="eur">1,336.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="gold">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="silver">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" data-filter="platinum">
-            <div class="card__header">
-              <img src="img/coin-1.png" alt="coin">
-              <div class="card__caption">
-                South Africa 1 oz Gold
-                Krugerrand (Random Year)
-              </div>
-            </div>
-            <div class="card__content">
-              <div class="stars-outer">
-                <div class="stars-inner" style="width: 87%"></div>
-              </div>
-              <div class="card__value" data-type="eth">0,320.89</div>
-              <div class="card__value" data-type="btc">0,320.89</div>
-              <div class="card__value" data-type="eur">0,320.89</div>
-              <div class="button-group button-group--card">
-                <button class="active" data-filter="eth">ETH</button>
-                <button data-filter="btc">BTC</button>
-                <button data-filter="eur">EUR</button>
-              </div>
-            </div>
-            <div class="card__footer">
-              <div class="input-group input-number-group">
-                <div class="input-group-button">
-                  <span class="input-number-decrement">-</span>
-                </div>
-                <input class="input-number" type="number" value="1" min="0" max="1000">
-                <div class="input-group-button">
-                  <span class="input-number-increment">+</span>
-                </div>
-              </div>
-              <div class="basket__icon">
-                <span class="icon-icon4"></span>
-                <a href="#" class="basket__count">+</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="loadmore" id="show-more-cards">Show more <i class="fa fa-angle-down"></i></button>
-      </div>
-    </section>
-    
-    <section class="section-about">
-      <div class="container">
-        <div class="row no-gutter">
-          <h2 class="section-caption">
-          Some information about the company <span class="strong"><q>Eclat Capital</q></span>
-          </h2>
-        </div>
-        <div class="row row-flex">
-          <p class="multicolumn">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-subscribe">
-      <div class="container">
-        <div class="row row-flex">
-          <div class="subscribe-icon">
-            <img src="img/svg/icon5.svg" alt="icon">
-          </div>
-          <div class="subscribe-text">
-            SIGN UP FOR EMAIL UPDATES FROM THE MINT AND BE IN THE KNOW
-          </div>
-          <form action="#" class="subscribe-form">
-            <input type="email" placeholder="E-mail address">
-            <button type="submit"><span class="hidden-xs">Subscribe</span><i class="fa fa-check visible-inline-xs"></i></button>
+    </div>
+  </header>
+  <div id="modal-email" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal__caption">Написать нам</div>
+          <div class="modal__descr">напишите нам и закажите
+оборудование прямо сейчас!</div>
+          <form action="#" class="modal__form" id="form-email">
+            <input type="text" id="form-email-name" placeholder="Ваше имя">
+            <input type="email" id="form-email-email" placeholder="Электронная почта">
+            <textarea id="form-email-text" placeholder="Опишите ваш вопрос"></textarea>
+            <button type="submit" class="btn btn--accent modal__button">Отправить <i class="fa fa-angle-right"></i></button>
           </form>
         </div>
       </div>
-    </section>
-
-    <section class="section-bottomline">
-      <div class="container">
-        <div class="row row-flex">
-          <div class="list-wrap">
-            <div class="list-before">We are in social networks</div>
-            <ul class="socials">
-              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
-              <li class="socials__item"><a href="#" class="socials__link" target="_blank"><i class="fa fa-telegram"></i></a></li>
-            </ul>
-          </div>
-          <div class="list-wrap">
-            <div class="list-before">Accepted for payment</div>
-            <ul class="payment">
-              <li><a href="#" target="_blank"><img src="img/payment-1.png" alt="payment"></a></li>
-              <li><a href="#" target="_blank"><img src="img/payment-2.png" alt="payment"></a></li>
-              <li><a href="#" target="_blank"><img src="img/payment-3.png" alt="payment"></a></li>
-              <li><a href="#" target="_blank"><img src="img/payment-4.png" alt="payment"></a></li>
-              <li><a href="#" target="_blank"><img src="img/payment-5.png" alt="payment"></a></li>
-              <li><a href="#" target="_blank"><img src="img/payment-6.png" alt="payment"></a></li>
-            </ul>
-          </div>
+    </div>
+  </div>
+  <div id="modal-call" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal__caption">Заказать звонок</div>
+          <div class="modal__descr">наш менеджер перезвонит Вам
+в ближайшее время</div>
+          <form action="#" class="modal__form" id="form-email">
+            <input type="text" id="form-call-name" placeholder="Ваше имя">
+            <input type="text" id="form-calll-phone" placeholder="+ 795 258 56 58">
+            <button type="submit" class="btn btn--accent modal__button">Перезвоните мне <i class="fa fa-angle-right"></i></button>
+          </form>
         </div>
       </div>
-    </section>
-
-    <footer class="main-footer">
-      <div class="container">
-        <div class="row row-flex">
-          <div class="footer-company">
-            © 2017 - Eclat Capital
-            All rights reserved
-          </div>
-          <div class="footer-info">
-            <ul class="footer-info__list">
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-            </ul>
-            <div class="footer-designer-link">
-              Design by - <a href="#">Alexander Skichko</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
-
-
-
+    </div>
   </div>
 
+  <section class="section-banner">
+    <div class="wrapper banner">
+      <div class="banner-slider owl-carousel">
+        <div class="slider__slide">
+          <div class="slider__img">
+            <img src="img/slide-1.png" alt="slide">
+          </div>
+          <div class="slider__descr">
+            <div class="slider-cap">Раскройные комплексы <span>“COMELZ”</span></div>
+            <ul class="slider-list">
+              <li class="slider-list__item">Раскройные комплексы для кож и синтетики;</li>
+              <li class="slider-list__item">Различные размеры рабочих столов;</li>
+              <li class="slider-list__item">Интуитивный интерфейс;</li>
+              <li class="slider-list__item">Самая высокая скорость движения ножа.</li>
+            </ul>
+            <button class="btn btn--accent">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+          </div>
+        </div>
 
+        <div class="slider__slide">
+          <div class="slider__img">
+            <img src="img/slide-1.png" alt="slide">
+          </div>
+          <div class="slider__descr">
+            <div class="slider-cap">Раскройные комплексы <span>“COMELZ”</span></div>
+            <ul class="slider-list">
+              <li class="slider-list__item">Раскройные комплексы для кож и синтетики;</li>
+              <li class="slider-list__item"Различные размеры рабочих столов></li>
+              <li class="slider-list__item">Интуитивный интерфейс;</li>
+              <li class="slider-list__item">Самая высокая скорость движения ножа.</li>
+            </ul>
+            <button class="btn btn--accent">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+          </div>
+        </div>
+
+        <div class="slider__slide">
+          <div class="slider__img">
+            <img src="img/slide-1.png" alt="slide">
+          </div>
+          <div class="slider__descr">
+            <div class="slider-cap">Раскройные комплексы <span>“COMELZ”</span></div>
+            <ul class="slider-list">
+              <li class="slider-list__item">Раскройные комплексы для кож и синтетики;</li>
+              <li class="slider-list__item"Различные размеры рабочих столов></li>
+              <li class="slider-list__item">Интуитивный интерфейс;</li>
+              <li class="slider-list__item">Самая высокая скорость движения ножа.</li>
+            </ul>
+            <button class="btn btn--accent">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+          </div>
+        </div>
+
+        <div class="slider__slide">
+          <div class="slider__img">
+            <img src="img/slide-1.png" alt="slide">
+          </div>
+          <div class="slider__descr">
+            <div class="slider-cap">Раскройные комплексы <span>“COMELZ”</span></div>
+            <ul class="slider-list">
+              <li class="slider-list__item">Раскройные комплексы для кож и синтетики;</li>
+              <li class="slider-list__item"Различные размеры рабочих столов></li>
+              <li class="slider-list__item">Интуитивный интерфейс;</li>
+              <li class="slider-list__item">Самая высокая скорость движения ножа.</li>
+            </ul>
+            <a href="#" class="btn btn--accent">Перейти в каталог <i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="slider-pagination-wrap">
+        <div class="slider-pagination">
+          <div class="pagination__numbers">
+            <div class="btn btn--border pagination__num">1</div>
+            <div class="btn btn--border pagination__num">2</div>
+            <div class="btn btn--border pagination__num">3</div>
+            <div class="btn btn--border pagination__num">4</div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section-catalog">
+    <div class="wrapper">
+      <h2 class="section-cap">Каталог оборудования</h2>
+      <div class="catalog-wrap">
+        <div class="catalog">
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-1.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-2.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-3.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-4.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-5.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-6.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-7.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-8.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-9.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+          <div class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/item-10.png" alt="item pic">
+            </div>
+            <div class="catalog-item__descr">
+              <div class="catalog-item__name">Программное обеспечение</div>
+              <button class="btn btn--border">Перейти в каталог <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+
+        </div>
+        <div class="control">
+          <button class="btn btn--border control-left" id="catalog-left"><span class="icon-icon5"></span></button>
+          <button class="btn btn--border control-right" id="catalog-right"><span class="icon-icon5"></span></button>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section-story">
+    <div class="wrapper">
+      <h2 class="section-cap cap-line">История компании <span class="accent">“Gramos”</span></h2>
+      <p class="section-text">
+        Мы с 1999 года работаем для Вас на рынке оборудования для производства обуви и кожгалантереи, а также оборудования для ремонта обуви. За время работы наша компания приобрела партнеров среди лидеров отечественного обувного рынка, а также зарекомендовала себя как надежного поставщика как для частных компаний, так и для федеральных государственных унитарных предприятий
+      </p>
+      <p class="section-text">
+        Мы предлагаем своим клиентам только проверенное временем, качественное оборудование из  Европы для производства и ремонта обуви от таких всемирно известных производителей, как: Atom, Besser, Cerim, Camoga, CGC, Comelz, Colli, Cosmopol, Durkopp Adler,  Fratelli Alberti, Elvi, Giovi, Iron fox, Mantovani, Munari, Matic, Omac, Pfaff, Sagitta, Sabal, Sarema, Sicomec, Sicom, Stemma,  SPS, SIlpar, Stern, Stema, Torti, Volber,  Volonte и другие.
+      </p>
+    </div>
+  </section>
+  
+  <section class="section-partners">
+    <div class="wrapper wrapper--relative">
+      <h2 class="section-cap cap-line">Наши партнеры <span class="accent sm">более 150 компаний</span></h2>
+      <div class="control" id="partners-control-container">
+      </div>
+      <div class="partners owl-carousel">
+        <div class="partners-item-wrap">
+          <div class="partners-item">
+            <img src="img/partner-1.png" alt="partner">
+          </div>
+        </div>
+        <div class="partners-item-wrap">
+          <div class="partners-item">
+            <img src="img/partner-2.png" alt="partner">
+          </div>
+        </div>
+        <div class="partners-item-wrap">
+          <div class="partners-item">
+            <img src="img/partner-3.png" alt="partner">
+          </div>
+        </div>
+        <div class="partners-item-wrap">
+          <div class="partners-item">
+            <img src="img/partner-4.png" alt="partner">
+          </div>
+        </div>
+        <div class="partners-item-wrap">
+          <div class="partners-item">
+            <img src="img/partner-5.png" alt="partner">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <secton class="section-services">
+    <div class="wrapper">
+      <h2 class="section-cap cap-line">Наши услуги <span class="accent sm">7 разновидностей</span></h2>
+      <div class="features-box">
+        <div class="features-item">
+          <div class="features-item__num">1</div>
+          <div class="features-item__text">Поставка нового и восстановленного
+            оборудования для обувного производства
+            и ремонта обуви</div>
+        </div>
+        <div class="features-item">
+          <div class="features-item__num">2</div>
+          <div class="features-item__text">Шеф-монтаж оборудования</div>
+        </div>
+        <div class="features-item">
+          <div class="features-item__num">3</div>
+          <div class="features-item__text">Поставка запасных
+            частей и расходных
+            материалов</div>
+        </div>
+        <div class="features-item">
+          <div class="features-item__num">4</div>
+          <div class="features-item__text">Консультирование по модернизации
+            парка оборудования и оптимизации
+            производственного процесса</div>
+        </div>
+        <div class="features-item">
+          <div class="features-item__num">5</div>
+          <div class="features-item__text">Обучение персонала</div>
+        </div>
+        <div class="features-item">
+          <div class="features-item__num">6</div>
+          <div class="features-item__text">Гарантийное и
+            постгарантийно
+            обслуживание</div>
+        </div>
+        <div class="features-item">
+          <div class="features-item__num">7</div>
+          <div class="features-item__text">Разработка проекта по созданию
+            фабрики</div>
+        </div>
+      </div>
+    </div>
+  </secton>
+
+  <section class="section-news">
+    <div class="wrapper">
+      <h2 class="section-cap cap-line">Свежие новости компании <span class="accent sm">6 последних</span></h2>
+      <div class="news-box">
+        <div class="excerpt">
+          <div class="excerpt__date">14.07.2017</div>
+          <h3 class="excerpt__cap"><a href="#">Запуск нового потока оборудования ООО «ЦПОСН
+«ОРТОМОДА»</a></h3>
+          <div class="excerpt__text">23 июня 2017 года в г. Москва на фабрике ООО «ЦПОСН «ОРТОМОДА» наша компания осуществила запуск нового ортопедического... оборудования. 
+Машины, произведенные в Европе, поставленные и введенные в работу специалистами ООО «Грамос» позволят создавать идеальную обувь с учетом всех особенностей стопы клиента.</div>
+        </div>
+        <div class="excerpt">
+          <div class="excerpt__date">24.04.2017</div>
+          <h3 class="excerpt__cap"><a href="#">Открытие производства ортопедической обуви
+"РИНТЕК" в г. Орел</a></h3>
+          <div class="excerpt__text">24 апреля 2017 года в Орле состоялось торжественное открытие обувной фабрики РИНТЕК. Поставка оборудования и запуск... производства произведены нашими специалистами.</div>
+        </div>
+        <div class="excerpt">
+          <div class="excerpt__date">15.09.2017</div>
+          <h3 class="excerpt__cap"><a href="#">Лель 20 лет! Поздравляем!</a></h3>
+          <div class="excerpt__text">Большое спасибо фабрике ЛЕЛЬ за вчерашний праздник!!! Еще раз хотим поздравить с юбилеем и пожелать дальнейшего развития и процветания! А наша компания была удостоена специального...</div>
+        </div>
+        <div class="excerpt">
+          <div class="excerpt__date">23.12.2016</div>
+          <h3 class="excerpt__cap"><a href="#">Развитие предприятий наших клиентов</a></h3>
+          <div class="excerpt__text">Чуть больше года прошло с момента запуска нами обувной фабрики по производству детской обуви Baby Orthopedic Shoes в Краснодаре. И теперь предприятие расширяется!</div>
+        </div>
+        <div class="excerpt">
+          <div class="excerpt__date">05.06.2017</div>
+          <h3 class="excerpt__cap"><a href="#">Запуск раскройного комплекса и стола предварительной
+раскладки ООО «ГК «Авангард Сейфети»</a></h3>
+          <div class="excerpt__text">15 июня 2017 года в Брянской области на фабрике по производству защитной обуви ООО «ГК «Авангард Сейфети» наши специалисты... осуществили запуск нового...</div>
+        </div>
+        <div class="excerpt">
+          <div class="excerpt__date">27.08.2017</div>
+          <h3 class="excerpt__cap"><a href="#">Российские обувщики добились временного запрета на
+вывоз кожевенного полуфабриката</a></h3>
+          <div class="excerpt__text">Правительство России ввело временный запрет на вывоз кожевенного полуфабриката из России.</div>
+        </div>
+        <div class="btn btn--border loadmore">Все новости <i class="fa fa-angle-right"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="wrapper wrapper--relative">
+      <div class="footer-info">
+        <div class="footer-logo">
+          <img src="img/logo-footer.svg" alt="logo">
+        </div>
+        <div class="footer-address">
+          Московская область, г. Королев, ул.
+          Болдырева д. 5 <a href="#"><span class="map-icon feedback-icon icon-icon-6"></span><span class="underline">На карте</span></a>
+        </div>
+        <div class="footer-phone">
+          +7 (495) 767-15-33
+          <a href="#"><span class="icon-icon2 feedback-icon"></span><span class="underline underline--dashed">Заказать звонок</span></a>
+        </div>
+        <div class="footer-soc-wrap">
+          <div class="footer-soc-text">Присоединяйся</div>
+          <ul class="footer-soc">
+            <li class="footer-soc__item"><a href="#" class="footer-soc__link" target="_blank"><i class="fa fa-vk"></i></a></li>
+            <li class="footer-soc__item"><a href="#" class="footer-soc__link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="footer-soc__item"><a href="#" class="footer-soc__link" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="footer-soc__item"><a href="#" class="footer-soc__link" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottomline">
+        <div class="copyright">© 2009 — 2017 ООО «Gramos». Оборудование для производства обуви и изделий из кожи. Все права защищены.</div>
+        <div class="designer-link">Design by — <a href="#">Alexander Skichko</a></div>
+      </div>
+    </div>
+  </footer>
+
+  
   <!-- Google fonts start-->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
   <!-- Google fonts end-->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/scripts.min.js"></script>
 </body>
 </html>
