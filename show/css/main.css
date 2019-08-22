@@ -568,6 +568,14 @@ p:last-child {
   background-color: #c1d2da;
 }
 
+.case-get-app-section .case-block {
+  margin-top: 123px;
+}
+
+.case-get-app-section .case-block-img {
+  width: 674px;
+}
+
 @media (min-width: 768px) {
   .case-banner-right {
     float: right;
