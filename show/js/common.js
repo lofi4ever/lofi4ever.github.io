@@ -1,36 +1,65 @@
 $(function() {
-  
-  var controller = new ScrollMagic.Controller();
 
-  // var tween = new TimelineMax()
-  //   .add([
-  //     TweenMax.fromTo('.js-case-phone', 1, {y: '10%'}, {y: getSliderPosition(), ease: Power2.easeInOut}),
-  //     TweenMax.fromTo('.js-case-slider-wrapper', 0.5, {opacity: '0'}, {opacity: '1', ease: Power2.easeInOut, delay: 0.7})
-  //   ]);
+  svg4everybody();
 
-  new ScrollMagic.Scene({
-    triggerElement: '.case-about-section'
-  })
-  .setClassToggle('.case-phone', 'transform')
-  //.setTween(tween)
-  .addTo(controller);
+  (function() {
+    var controller = new ScrollMagic.Controller();
+    var sliderElement = $(".js-case-banner-slider");
 
-  function getSliderPosition() {
-    var result;
-    if(window.matchMedia("(max-width: 1200px)").matches) {
-      result = '110%';
-    } else {
-      result = '90%';
+    sliderElement.on("init", function() {
+      var $slides = $(this).find(".slick-slide"),
+        resizeTimeout = null; //чтобы функция срабатывала только когда ресайз окончен
+      setMaxH($slides);
+      $(window).on("resize orientationchange", function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+          setMaxH($slides);
+        }, 500);
+      });
+    });
+
+    function setMaxH($elements) {
+      $elements.height("");
+      var maxH = Math.max.apply(
+        Math,
+        $.map($elements, function(el) {
+          return $(el).height();
+        })
+      );
+      $elements.height(maxH);
     }
-    return result;
-  }
 
-  $('.js-case-banner-slider').slick({
-    slidesToShow: 1,
-    autoplay: true,
-    dots: true,
-    prevArrow: $('.case-slider-arrow--left'),
-    nextArrow: $('.case-slider-arrow--right')
-  });
+    sliderElement.slick({
+      slidesToShow: 1,
+      autoplay: true,
+      dots: true,
+      prevArrow: $(".case-slider-arrow--left"),
+      nextArrow: $(".case-slider-arrow--right")
+    });
 
+    new ScrollMagic.Scene({
+      triggerElement: ".case-about-section"
+    })
+      .setClassToggle(".case-phone", "transform")
+      .on("enter", function() {
+        sliderElement.slick("slickPlay");
+      })
+      .on("leave", function() {
+        sliderElement.slick("slickGoTo", 0);
+        sliderElement.slick("slickPause");
+      })
+      .addTo(controller);
+  })();
+
+  //other animations
+  (function() {
+    var controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+      triggerElement: ".js-transform-block--01-trigger",
+      reverse: false
+    })
+      .setClassToggle(".js-transform-block--01", "transform")
+      .addTo(controller);
+  })();
 });

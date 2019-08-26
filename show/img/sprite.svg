@@ -17,11 +17,11 @@
     </defs>
 
     <symbol id="arrow-left" class="sprite" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M-4.5897e-07 9.5L15.75 0.406734L15.75 18.5933L-4.5897e-07 9.5Z" fill="#D84545"/>
+      <path d="M-4.5897e-07 9.5L15.75 0.406734L15.75 18.5933L-4.5897e-07 9.5Z" fill="currentColor"/>
     </symbol>
 
     <symbol id="arrow-right" class="sprite" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 9.5L0.250001 0.406734L0.25 18.5933L16 9.5Z" fill="#D84545"/>
+      <path d="M16 9.5L0.250001 0.406734L0.25 18.5933L16 9.5Z" fill="currentColor"/>
     </symbol>
 
     <symbol id="ico-fb" class="sprite" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
