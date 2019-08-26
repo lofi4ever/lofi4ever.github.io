@@ -6,29 +6,6 @@ $(function() {
     var controller = new ScrollMagic.Controller();
     var sliderElement = $(".js-case-banner-slider");
 
-    sliderElement.on("init", function() {
-      var $slides = $(this).find(".slick-slide"),
-        resizeTimeout = null; //чтобы функция срабатывала только когда ресайз окончен
-      setMaxH($slides);
-      $(window).on("resize orientationchange", function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-          setMaxH($slides);
-        }, 500);
-      });
-    });
-
-    function setMaxH($elements) {
-      $elements.height("");
-      var maxH = Math.max.apply(
-        Math,
-        $.map($elements, function(el) {
-          return $(el).height();
-        })
-      );
-      $elements.height(maxH);
-    }
-
     sliderElement.slick({
       slidesToShow: 1,
       autoplay: true,
@@ -38,9 +15,9 @@ $(function() {
     });
 
     new ScrollMagic.Scene({
-      triggerElement: ".case-about-section"
+      triggerElement: ".js-transform-block--00-trigger"
     })
-      .setClassToggle(".case-phone", "transform")
+      .setClassToggle(".js-transform-block--00", "transform")
       .on("enter", function() {
         sliderElement.slick("slickPlay");
       })
