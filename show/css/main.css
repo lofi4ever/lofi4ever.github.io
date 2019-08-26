@@ -211,6 +211,7 @@ body {
   padding: 4px;
   border-radius: 50%;
   border: none;
+  background-color: #dddddd;
 }
 
 .case-banner-slider .slick-dots li.slick-active button {
@@ -813,6 +814,11 @@ body {
   opacity: 1;
 }
 
+.js-transform-block--00-trigger {
+  position: absolute;
+  top: 0;
+}
+
 @media (min-width: 768px) {
   .line-break--below-sm {
     display: none;
@@ -959,6 +965,10 @@ body {
   .case-banner-slider__text {
     font-size: 9px;
     margin-top: 16px;
+  }
+
+  .case-banner-slider .slick-dots li button {
+    padding: 3px;
   }
 
   .case-banner-slider-arrows {
@@ -1363,6 +1373,10 @@ body {
 
   #case-get-app-img {
     width: 342px;
+  }
+
+  .js-transform-block--00-trigger {
+    position: static;
   }
 }
 

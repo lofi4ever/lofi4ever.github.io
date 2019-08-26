@@ -396,6 +396,10 @@ body {
         padding: 4px;
         border-radius: 50%;
         border: none;
+        background-color: rgb(221, 221, 221); 
+        @include r-b(lg) {
+          padding: 3px;
+        } 
       }
       &.slick-active {
         button {
@@ -1314,5 +1318,13 @@ body {
   &.transform {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+.js-transform-block--00-trigger {
+  position: absolute;
+  top: 0;
+  @include r-bt(sm, lg) {
+    position: static; //tablets fix
   }
 }
