@@ -460,8 +460,9 @@
 }
 
 .num-block__icon .ico {
-  max-width: 90px;
   fill: none;
+  width: 90px;
+  height: 70px;
 }
 
 .num-block__number {

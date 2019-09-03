@@ -786,8 +786,10 @@ $text-color: #282828;
       padding-left: 35px;
     }
     .ico {
-      max-width: 90px;//ie fix
+      //max-width: 90px;//ie fix
       fill: none; //ie fix
+      width: 90px;
+      height: 70px;
     }
   }
   &__number {
