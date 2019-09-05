@@ -78,30 +78,30 @@ $breakpoints: (
 //Fonts
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/Roboto/Roboto-Regular.eot?#iefix")
+  src: url("../fonts/Roboto/Roboto-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../../fonts/Roboto/Roboto-Regular.woff") format("woff"),
-    url("../../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    url("../fonts/Roboto/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/Roboto/Roboto-Bold.eot?#iefix")
+  src: url("../fonts/Roboto/Roboto-Bold.eot?#iefix")
       format("embedded-opentype"),
-    url("../../fonts/Roboto/Roboto-Bold.woff") format("woff"),
-    url("../../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+    url("../fonts/Roboto/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/Roboto/Roboto-Black.eot?#iefix")
+  src: url("../fonts/Roboto/Roboto-Black.eot?#iefix")
       format("embedded-opentype"),
-    url("../../fonts/Roboto/Roboto-Black.woff") format("woff"),
-    url("../../fonts/Roboto/Roboto-Black.ttf") format("truetype");
+    url("../fonts/Roboto/Roboto-Black.woff") format("woff"),
+    url("../fonts/Roboto/Roboto-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
