@@ -111,6 +111,10 @@ $accent: #d84545;
 $banner-bg: #373f45;
 $text-color: #282828;
 
+html, body {
+  min-width: 360px;
+}
+
 .case-wrapper {
   overflow-x: hidden;
   font-family: Roboto, Helvetica, sans-serif;
@@ -135,7 +139,7 @@ $text-color: #282828;
   &--above-lg {
     @include r-b(lg) {
       display: none;
-    }
+    } 
   }
   &--above-sm {
     @include r-b(sm) {
@@ -205,6 +209,12 @@ $text-color: #282828;
   background: url(../img/banner-bg.jpg) $banner-bg center bottom no-repeat;
   background-size: cover;
   @include r-b(lg) {
+    background-position-x: 40%;
+  }
+  @include r-bt(sm, lg) {
+    height: 603px;
+  }
+  @include r-b(sm) {
     background-position-x: right;
   }
 }
@@ -224,7 +234,8 @@ $text-color: #282828;
 
 .case-banner-content {
   @include r-bt(sm, lg) {
-    width: 50%;
+    //width: 50%;
+    width: 450px;
     float: left;
   }
 }
@@ -237,6 +248,7 @@ $text-color: #282828;
   }
   @include r-bt(sm, lg) {
     margin-top: -17px;
+    width: calc(100% - 450px);
   }
   @include r-b(sm) {
     margin-top: 12px;
@@ -248,16 +260,21 @@ $text-color: #282828;
   bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
+  margin-left: 34px;
   @include r-b(lg) {
     width: 421px;
-    bottom: -1px;
+    bottom: -64px;
+  }
+  @include r-bt(md, lg) {
+    margin-left: 134px;
   }
   @include r-bt(sm, md) {
-    margin-left: 50px;
+    margin-left: 16px;
   }
   @include r-b(sm) {
     width: 352px;
-    bottom: -8px;
+    bottom: -18px;
+    margin-left: 0;
   }
 }
 
@@ -266,6 +283,7 @@ $text-color: #282828;
   height: 934px;
   transform: translateY(92px);
   margin: 0 auto;
+  margin-right: 0;
   position: relative;
   z-index: 10;
   padding: 28px;
@@ -276,7 +294,7 @@ $text-color: #282828;
   @include r-b(lg) {
     width: 226px;
     height: 452px;
-    transform: translateY(38px);
+    transform: translateY(51px);
     padding: 14px;
   }
   @include r-bt(sm, md) {
@@ -285,13 +303,17 @@ $text-color: #282828;
   }
   @include r-b(sm) {
     margin: 0 auto;
-    width: 188px;
-    height: 375px;
+    // width: 188px;
+    // height: 375px;
   }
   &.transform {
     transform: translateY(90%);
     @include r-b(lg) {
-      transform: translateY(110%);
+      //transform: translateY(110%);
+      transform: translateY(131%);
+    }
+    @include r-b(sm) {
+      transform: translateY(116%);
     }
   }
   &__bg {
@@ -421,6 +443,9 @@ $text-color: #282828;
   @include r-b(lg) {
     margin-top: 46px;
   }
+  @include r-b(sm) {
+    display: none;
+  }
 }
 
 .case-slider-arrow {
@@ -489,12 +514,12 @@ $text-color: #282828;
 }
 
 .case-awards-block {
-  margin-top: 54px;
+  margin-top: 47px;
   @include r-b(lg) {
-    margin-top: 84px;
+    margin-top: 32px;
   }
   @include r-b(sm) {
-    margin-top: 46px;
+    margin-top: 49px;
   }
 }
 
@@ -508,14 +533,28 @@ $text-color: #282828;
   }
   @include r-b(lg) {
     font-size: 12px;
-    line-height: 18px;
+    line-height: 15px;
     &:not(:last-child) {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
   }
   @include r-b(sm) {
     &:not(:last-child) {
-      margin-bottom: 14px;
+      margin-bottom: 19px;
+    }
+  }
+  &:first-child {
+    @include r-a(lg) {
+      img {
+        width: 48px;
+      }
+    }
+  }
+  &:last-child {
+    @include r-a(lg) {
+      img {
+        width: 56px;
+      }
     }
   }
   &__img {
@@ -545,6 +584,9 @@ $text-color: #282828;
     }
     strong {
       display: block;
+      @include r-b(sm) {
+        margin-bottom: 4px;
+      }
     }
   }
 }
@@ -552,18 +594,24 @@ $text-color: #282828;
 .case-download-block {
   margin-top: 65px;
   white-space: nowrap;
+  padding-left: 8px;
   @include r-b(lg) {
-    margin-top: 58px;
+    margin-top: 23px;
+    padding-left: 2px;
   }
   @include r-b(sm) {
     margin-top: 63px;
   }
   &--sm {
     margin-top: 42px;
+    @include r-b(lg) {
+      margin-top: 67px;
+    }
     @include r-b(sm) {
       margin-top: 48px;
     }
     .case-download-link {
+      height: 47px;
       @include r-a(sm) {
         &--google-play {
           img {
@@ -592,18 +640,65 @@ $text-color: #282828;
   img {
     display: block;
   }
+
+  &--vector {
+    position: relative;
+    height: 47px;
+    transition: .3s ease;
+    background-color: #000;
+    padding: 5px 8px;
+    border: 1px solid #000;
+    border-radius: 6px;
+  }
+  &--hover {
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+      .case-download-image-vector {
+        opacity: 0;
+        &--hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.case-download-image-vector {
+  height: 100%;
+  width: auto;
+  transition: .3s ease;
+  &--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: inherit;
+  }
 }
 
 .case-soc-block {
   margin-top: 40px;
+  @include r-b(lg) {
+    margin-top: 20px;
+  }
+  @include r-b(sm) {
+    margin-top: 43px;
+  }
 }
 
 .case-soc-block-list {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
+  padding-left: 9px;
+  @include r-b(lg) {
+    padding-left: 0;
+  }
   &__item {
     display: inline-block;
+    position: relative;
+    vertical-align: top;
     .ico {
       width: 27px;
       height: 27px;
@@ -613,8 +708,38 @@ $text-color: #282828;
       }
     }
     &:not(:first-child) {
-      margin-left: 12px;
+      margin-left: 10px;
+      @include r-b(sm) {
+        margin-left: 12px;
+      }
     }
+
+    &:hover {
+      .case-soc-icon {
+        opacity: 0;
+        &--hover {
+          opacity: 1;
+        }
+      }
+    }
+    @include r-b(sm) {
+      width: 33px;
+    }
+  }
+  &__link {
+    display: block;
+  }
+}
+
+.case-soc-icon {
+  opacity: 1;
+  transition: .3s ease;
+  width: 100%;
+  &--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
   }
 }
 
@@ -624,11 +749,17 @@ $text-color: #282828;
   @include r-a(lg) {
     min-height: 905px;
   }
+  @include r-bt(sm, lg) {
+    // min-height: 590px;
+    min-height: 580px;
+  }
   @include r-b(lg) {
-    padding: 105px 0 92px;
+    //padding: 105px 0 92px;
+    padding: 95px 0 92px;
   }
   @include r-b(sm) {
-    padding: 488px 0 80px;
+    //padding: 488px 0 80px;
+    padding: 563px 0 80px;
   }
 }
 
@@ -682,7 +813,8 @@ $text-color: #282828;
 }
 
 .case-numbers-section {
-  padding: 83px 0 6px;
+  padding: 83px 0 0;
+  background-color: #D84545;
   background-image: url(../img/case-numbers-section.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -713,14 +845,11 @@ $text-color: #282828;
 }
 
 .case-numbers-block {
-  margin-top: 105px;
+  margin-top: 117px;
   padding: 0 16px;
   line-height: normal;
-  @include r-bt(sm, lg) {
-    padding: 0 44px;
-  }
   @include r-b(lg) {
-    margin-top: 50px;
+    margin-top: 60px;
   }
   @include r-b(sm) {
     padding: 0 7px;
@@ -730,9 +859,9 @@ $text-color: #282828;
 
 .num-block {
   position: relative;
-  margin-bottom: 177px;
+  margin-bottom: 198px;
   @include r-b(lg) {
-    margin-bottom: 93px;
+    margin-bottom: 115px;
   }
   @include r-b(sm) {
     margin-bottom: 63px;
@@ -745,8 +874,8 @@ $text-color: #282828;
     position: absolute;
     background: rgba(253, 237, 238, 0.1);
     border-radius: 50%;
-    top: -8px;
-    left: 0;
+    top: -18px;
+    left: 12px;
     @include r-b(lg) {
       left: 15px;
     }
@@ -763,7 +892,7 @@ $text-color: #282828;
     padding-left: 98px;
     display: table;
     @include r-b(lg) {
-      padding-left: 105px;
+      padding-left: 92px;
     }
     @include r-b(sm) {
       padding-left: 0;
@@ -772,9 +901,13 @@ $text-color: #282828;
   &__icon {
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 9px;
     @include r-bt(md, lg) {
       top: 0;
+    }
+    @include r-b(lg) {
+      top: 24px;
+      left: -10px;
     }
     @include r-b(sm) {
       position: relative;
@@ -943,7 +1076,21 @@ $text-color: #282828;
   background-position: center right;
   background-size: contain;
   @include r-a(lg) {
-    background-size: 100%;    
+    background-size: auto 100%;    
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 80%;
+      background-image: url(../img/case-app-section-bg--details.png);
+      background-size: 100%;
+      width: 732px;
+      background-position: center;
+      transform: translate(-55px, 135px);
+    }
   }
   @include r-b(lg) {
     background-image: url(../img/case-app-section-bg--sm.png);  
@@ -1069,10 +1216,10 @@ $text-color: #282828;
   background-size:cover;
   background-position: right top;
   @include r-b(lg) {
-    padding-bottom: 32px;
+    padding-bottom: 56px;
   }
   @include r-b(sm) {
-    padding-bottom: 25px;
+    padding-bottom: 36px;
     margin-bottom: 59px;
     background-position: 78% top;
   }
@@ -1122,8 +1269,13 @@ $text-color: #282828;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    @include r-a(lg) {
+      width: 602px;
+      max-width: none;
+      margin-left: -21px;
+    }
     @include r-b(lg) {
-      max-width: 400px;      
+      max-width: 400px;
     }
     @include r-b(sm) {
       margin-top: 28px;
@@ -1153,17 +1305,18 @@ $text-color: #282828;
       position: absolute;
       bottom: 15px;
       left: 0;
-      transform: translateX(-77%);
       line-height: 28px;
+
+      left: -258px;
+      bottom: 70px;
     }
     @include r-bt(sm, lg) {
-      margin-left: -77px;
-      margin-top: -21px;
+      margin-top: -16px;
+      margin-left: -45px;
     }
     @include r-b(sm) {
       width: calc(100% - 20px);
-      margin-left: 10px;
-      margin-top: -16px;
+      margin-top: -8px;
     }
   }
 }
@@ -1336,10 +1489,10 @@ $text-color: #282828;
   .case-bullet {
     position: absolute;
     right: 5px;
-    top: 0;
+    top: 35px;
     width: 321px;
     height: 321px;
-    transform: translateY(calc(-50% + 35px));
+    transform: translateY(-50%);
     border-width: 37px;
   }
 }
@@ -1375,7 +1528,7 @@ $text-color: #282828;
   max-width: 100%;
 }
 
-.js-transform-block--01 {
+.js-transform-block--01, .js-transform-block--02 {
   transform: scale(0);
   opacity: 0;
   transition: .7s ease;
@@ -1423,6 +1576,7 @@ $text-color: #282828;
       padding: 68px 0 59px;
     }
     @include r-b(sm) {
+      padding-top: 48px;
       padding-bottom: 109px;
     }
     .case-text {

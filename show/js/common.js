@@ -10,8 +10,7 @@ $(function() {
       slidesToShow: 1,
       autoplay: true,
       dots: true,
-      prevArrow: $(".case-slider-arrow--left"),
-      nextArrow: $(".case-slider-arrow--right")
+      arrows: false
     });
 
     new ScrollMagic.Scene({
@@ -37,6 +36,13 @@ $(function() {
       reverse: false
     })
       .setClassToggle(".js-transform-block--01", "transform")
+      .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: ".js-transform-block--02-trigger",
+      reverse: false
+    })
+      .setClassToggle(".js-transform-block--02", "transform")
       .addTo(controller);
   })();
 });
