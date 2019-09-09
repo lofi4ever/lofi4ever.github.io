@@ -337,10 +337,6 @@ body {
   margin-top: 42px;
 }
 
-.case-download-block--sm .case-download-link {
-  height: 47px;
-}
-
 .case-download-link {
   display: inline-block;
   vertical-align: top;
@@ -356,18 +352,8 @@ body {
 
 .case-download-link--vector {
   position: relative;
-  height: 47px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
-  background-color: #000;
-  padding: 5px 8px;
-  border: 1px solid #000;
-  border-radius: 6px;
-}
-
-.case-download-link--hover:hover {
-  background-color: transparent;
-  border-color: #fff;
 }
 
 .case-download-link--hover:hover .case-download-image-vector {
@@ -380,6 +366,7 @@ body {
 
 .case-download-image-vector {
   height: 100%;
+  width: 100% !important;
   width: auto;
   -webkit-transition: .3s ease;
   transition: .3s ease;
@@ -862,6 +849,7 @@ body {
   display: inline-block;
   position: relative;
   margin-right: 25px;
+  outline: none !important;
 }
 
 .case-letter-link:before {
@@ -930,14 +918,6 @@ body {
   .case-banner-right {
     float: right;
     width: 45%;
-  }
-
-  .case-download-block--sm .case-download-link--google-play img {
-    width: 128px;
-  }
-
-  .case-download-block--sm .case-download-link--app-store img {
-    width: 114px;
   }
 
   .case-get-app-img-wrap {
