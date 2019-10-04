@@ -1,0 +1,41 @@
+.clock-item {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px; }
+  .clock-item .text {
+    top: 11px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%; }
+    .clock-item .text .val {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fdffee;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 2px;
+      text-shadow: 0 2px 9px rgba(0, 0, 0, 0.11); }
+    .clock-item .text .type-time {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 10px;
+      text-align: center;
+      margin: 0;
+      text-shadow: 0 1px 2px black, 0 -1px 2px black; }
+
+.kineticjs-content {
+  border: 7px solid #252443;
+  border-radius: 50%;
+  box-sizing: border-box; }
+  .kineticjs-content > canvas {
+    top: -7px !important;
+    left: -7px !important; }
+
+.countdown_text {
+  color: #fdffee;
+  font-weight: bold;
+  line-height: 20px;
+  text-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+  margin-top: 7px;
+  font-size: 12px;
+  text-align: right; }

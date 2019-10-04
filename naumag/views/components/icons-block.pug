@@ -1,0 +1,41 @@
+-
+  var blocks = [
+    {
+      icon: "img/icon-block-img-1.png",
+      text: `Научные
+        развивающие наборы
+        и опыты для детей
+        по основным
+        и естественным наукам 
+        `
+    },
+    {
+      icon: "img/icon-block-img-2.png",
+      text: `Познавательные
+        развивающие игрушки,
+        которые представляют
+        для ребенка
+        не только увлекательную,
+        но и образовательную ценность.
+        `
+    },
+    {
+      icon: "img/icon-block-img-3.png",
+      text: `Непрерывная <br>
+        образовательная траектория
+        с «Научными развлечениями»
+        от интерактивных экспонатов
+        до роботизированных
+        конструкторов
+        с функцией
+        «Интернет вещей»
+        `
+    }
+  ]
+
+.row.case-icon-blocks
+  each block in blocks
+    .col-sm-4.case-icon-block  
+      .case-icon-block__icon
+        img(src=block['icon'])
+      .case-icon-block__text !{block['text']} 

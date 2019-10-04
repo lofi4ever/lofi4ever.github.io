@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Document
+  link(rel='stylesheet' href='plugins/bootstrap/bootstrap.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css')
+  link(rel='stylesheet' href='css/main.css')
+body
+  .case-wrapper
+    include sections/_section-countdown.pug 
+    .case-main-content
+      include components/_decor.pug
+      include sections/_section-00.pug 
+      include sections/_section-01.pug
+      include sections/_section-02.pug
+      include sections/_section-03.pug
+      include sections/_section-04.pug
+      include sections/_section-05.pug
+      include sections/_section-06.pug
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
+script(src='js/libs.js')
+script(src='js/common.js')
