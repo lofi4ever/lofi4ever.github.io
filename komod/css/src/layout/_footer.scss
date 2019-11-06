@@ -1,0 +1,266 @@
+.footer {
+  &__inner {
+    background-color: #fff;
+  }
+}
+
+.footer-mobile {
+  display: none;
+}
+
+.footer-nav {
+  display: table;
+  position: relative;
+  z-index: 1;
+  & + & {
+    margin-top: 28px;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 31px;
+  }
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+    margin-top: 16px;
+    margin-bottom: 0;
+    &-item {
+      &--key-val {
+        display: flex;
+        justify-content: space-between;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  &__list-item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  &__soc-list {
+    list-style-type: none;
+    padding-left: 0;
+    &-item {
+      display: inline-block;
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+    &-link {
+      width: 25px;
+      height: 25px;
+      display: block;
+      .ico-wrapper {
+        color: #6F6F6F;
+        transition: color .3s ease;
+      }
+      &:hover {
+        .ico-wrapper {
+          color: #DD5E71;
+        }
+      }
+      * {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.footer-col {
+  /* footer styles */
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  &--3 {
+    color: #000;
+    a {
+      color: #000;
+    }
+  }
+  &--1 {
+    position: relative;
+    background-color: #543331;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 98%; //just in case
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background-color: inherit;
+    }
+  }
+  &--2 {
+    background: linear-gradient(90deg, #F2BF44 1.55%, #F6B943 53.39%);
+  }
+  &--3 {
+    background-color: #fff;
+  }
+  /* !footer styles */
+
+  /* !footer layout */
+  padding: {
+    top: 46px;
+    bottom: 100px;
+    left: 18px;
+    right: 18px;
+  };
+  &-wrapper {
+    display: flex;
+    margin: 0 -18px;
+  }
+  flex: 1;
+  &--1 {
+    flex-grow: 3;
+  }
+  &--2 {
+    flex-grow: 5; 
+    display: flex;
+  }
+  &--3 {
+    flex-grow: 4; 
+  }
+  &-sub {
+    flex: 1;
+  }
+  /* !footer layout */
+}
+
+.footer-right-img {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  height: 100%;
+  display: block;
+}
+
+.logo-footer {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 120px;
+  z-index: 1;
+}
+
+@include r-b(lg) {
+  
+  .footer-col {
+    padding: {
+      top: 33px;
+      bottom: 76px;
+    }
+    &--1 {
+      .footer-nav {
+        margin-left: auto;;
+      }
+    }
+  }
+
+  .footer-nav {
+    & + & {
+      margin-top: 9px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__list {
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 12px;
+    }
+    &__list-item {
+      &:not(:first-child) {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .logo-footer {
+    width: 88px;
+  }
+}
+
+@include r-b(sm) {
+  .footer {
+    &__inner {
+      background: linear-gradient(90deg, #543331 -0.94%, #663B3A 100%);
+      padding-bottom: 50px;
+    }
+  }
+
+  .footer-desktop {
+    display: none;
+  }
+
+  .footer-nav {
+    color: #fff;
+    a {
+      color: #fff;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 31px;
+    }
+    &__soc-list {
+      &-item {
+        &:not(:first-child) {
+          margin-left: 42px;
+        }
+      }
+      &-link {
+        width: 35px;
+        height: 35px;
+        .ico-wrapper {
+          color: #fff;
+        }
+        &:hover {
+          .ico-wrapper {
+            color: #DD5E71;
+          }
+        }
+      }
+    }
+  }
+  
+  .logo-footer {
+    width: 48px;
+  }
+
+  .footer-right-img {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: block;
+    &__grid-1 {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 34px;
+      justify-content: space-between;
+      .footer-nav {
+        min-width: 35%; //to make sure there will be only 2 items in the line
+        margin-top: 32px;
+      }
+    }
+    &__grid-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 42px;
+      .footer-nav {
+        &:not(:first-child) {
+          margin-top: 47px;
+        }
+      }
+    }
+  }
+}

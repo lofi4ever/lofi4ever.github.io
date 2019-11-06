@@ -1,0 +1,70 @@
+/* Main banner */
+#main-banner {
+  &--01 {
+    .banner {
+      &__img {
+        right: auto;
+        left: 40%;
+      }
+      &__content {
+        margin-top: -32px;
+      }
+    }
+    .banner-circle {
+      bottom: 46px;
+    }
+  }
+}
+
+@include r-b(ipad) {
+  #main-banner {
+    &--01 {
+      .banner-circle {
+        bottom: 22px;
+      }
+    }
+  }
+}
+
+@include r-b(sm) {
+  #main-banner {
+    &--01 {
+      .banner {
+        &__content {
+          margin-top: 0;
+        }
+        &__img {
+          left: 19%;
+          max-width: 398px;      
+        }
+      }
+    }
+  }
+}
+/* !Main banner */
+
+/* Sections */
+#main-section {
+  &--01 {
+    padding-top: 59px;
+    padding-bottom: 84px;
+  }
+}
+
+@include r-b(ipad) {
+  #main-section {
+    &--01 {
+      padding-top: 42px;
+      padding-bottom: 55px;
+    }
+  }
+}
+
+@include r-b(ipad) {
+  #main-section {
+    &--01 {
+      padding-top: 30px;
+    }
+  }
+}
+/* !Sections */

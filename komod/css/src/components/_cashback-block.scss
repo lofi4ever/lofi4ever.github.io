@@ -1,0 +1,138 @@
+.cashback {
+  position: relative;
+  padding-bottom: 36px;
+  overflow: hidden;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 740px;
+    height: 740px;
+    border-radius: 50%;
+    background-color: #DD5E71;
+  }
+  &__content-wrapper {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    min-height: 490px;
+    //margin-top: 54px;
+    background: linear-gradient(90deg, #F3C963 0%, #EEB64A 60.94%);
+    padding-top: 137px;
+    padding-bottom: 50px;
+  }
+  &__content {
+    color: #fff;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    font-size: 176px;
+    line-height: 151px;
+    font-weight: 700;
+    .asterisk {
+      font-size: 36px;
+      line-height: 36px;
+      vertical-align: super;
+      margin-left: -30px;
+    }
+  }
+  &__description {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 300;
+  }
+  &__link {
+    margin-top: 36px;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    padding-top: 90px;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  &__note {
+    position: absolute;
+    bottom: 54px;
+    right: 0;
+    font-size: 12px;
+    color: #000;
+    padding-right: inherit;
+  }
+}
+
+@include r-b(ipad) {
+  .cashback {
+    &:after {
+      width: 582px;
+      height: 582px;
+    }
+    &__content-wrapper {
+      padding-top: 72px;
+      min-height: 396px;
+    }
+    &__title {
+      font-size: 136px;
+      line-height: 119px;
+    }
+    &__description {
+      font-size: 24px;
+    }
+    &__link {
+      margin-top: 30px;
+    }
+    &__img {
+      padding-top: 47px;
+      img {
+        width: 596px;
+      }
+    }
+    &__note {
+      bottom: 19px;
+    }
+  }
+}
+
+@include r-b(sm) {
+  .cashback {
+    &:after {
+      content: none;
+    }
+    &__content-wrapper {
+      padding-top: 50px;
+      top: 0;
+      min-height: 290px;
+    }
+    &__title {
+      font-size: 56px;
+      line-height: 49px;
+      .asterisk {
+        font-size: 18px;
+        margin-left: -6px;
+      }
+    }
+    &__description {
+      font-size: 18px;
+    }
+    &__link {
+      margin-top: 20px;
+    }
+    &__img {
+      padding-top: 100px;
+      img {
+        width: 310px;
+        max-width: none;
+        transform: translateX(-56px);
+      }
+    }
+  }
+}

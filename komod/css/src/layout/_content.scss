@@ -1,0 +1,17 @@
+html, body {
+    font-family: $main-font;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.common-section {
+  padding-top: 65px;
+}
+
+.slick-slide {
+  outline: none!important;
+}

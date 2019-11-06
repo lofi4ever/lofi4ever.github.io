@@ -1,0 +1,252 @@
+/* Product card */
+.product-card {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  max-width: 350px;
+  &__img {
+    height: 280px;
+    background-color: #fff;
+    position: relative;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      transform: translate(-50% ,78px);
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 1;
+    }
+  }
+  &__content {
+    background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
+    color: #fff;
+    //padding: 106px 20px 90px;
+    padding: 106px 20px 94px;
+    position: relative;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase; 
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 24px;
+    //line-height: 45px;
+    font-weight: 700;
+  }
+  &__text {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-bottom: 8px;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    line-height: 0;
+    font-size: 0;
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+  &__label, &__price {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  &__label {
+    font-size: 24px;
+    line-height: 31px;
+  }
+  &__price {
+    font-size: 36px;
+    line-height: 45px;
+    .price-num {
+      font-weight: 700;
+    }
+    .price-rub {
+      font-family: RUBSN;
+      font-size: 30px;
+    }
+  }
+}
+
+@include r-b(ipad) {
+  .product-card {
+    &__img {
+      height: 200px;
+      img {
+        transform: translate(-50%, 64px);
+      }
+    }
+    &__content {
+      padding-top: 65px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    &__description { 
+      font-size: 18px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__label {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__price {
+      .price-num {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .price-rub {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@include r-b(sm) {
+  .product-card {
+    &__img {
+      height: 150px;
+      img {
+        transform: translate(-50%, 38px);
+      }
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    &__content {
+      padding: {
+        top: 38px;
+      }
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__price {
+      .price-num {
+        font-size: 18px;
+      }
+      .price-rub {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include r-b(xs) {
+  .product-card {
+    max-width: 200px;
+  }
+}
+/* !Product card */
+
+/* Product slider */
+.products-slider {
+  width: calc(100% + 20px);
+  padding: 0 10px;
+  margin-left: -10px;
+  overflow: hidden;
+  margin-top: 16px;
+  text-align: center;
+  .product-card {
+    transition: box-shadow .1s ease;
+  }
+  .slick-slide {
+    padding: 20px 10px;
+  }
+  .slick-list {
+    overflow: visible
+  }
+  [aria-hidden="true"] {
+    .product-card {
+      box-shadow: none;
+    }
+  }
+}
+
+@include r-b(ipad) {
+  .products-slider {
+    margin-top: 27px;
+  }
+}
+
+@include r-b(sm) {
+  .products-slider {
+    margin-top: 14px;
+  }
+}
+/* !Product slider */
+
+/* Products slider navigation */
+.products-slider-nav { 
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  //transform: translateY(-50%);
+  .slick-arrow {
+    width: 91px;
+    height: 91px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #F2BE43;
+    position: absolute;
+    bottom: 0;
+    padding: 26px;
+    cursor: pointer;
+    * {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .slick-prev {
+    left: 10px;
+  }
+  .slick-next {
+    right: 10px;
+  }
+}
+
+@include r-b(ipad) {
+  .products-slider-nav {
+    .slick-arrow {
+      width: 47px;
+      height: 47px;
+      padding: 13px;
+    }
+  }
+}
+
+@include r-b(sm) {
+  .products-slider-nav {
+    .slick-arrow {
+      width: 31px;
+      height: 31px;
+      padding: 8px;
+    }
+  }
+}
+/* !Products slider navigation */
