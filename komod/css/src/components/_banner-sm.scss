@@ -1,0 +1,138 @@
+.about-sm-banner {
+  background: linear-gradient(90deg, #F3C963 0%, #EEB64A 60.94%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background-color: #5C3836;
+  }
+  &:before {
+    top: -70px;
+    right: -70px;
+  }
+  &:after {
+    bottom: -80px;
+    left: -83px;
+  }
+  &__holder {
+    height: 510px;
+    background-image: url(../img/about/ruda-dziewczyna.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+  }
+  &__block {
+    position: absolute;
+    padding: inherit;
+    &--top {
+      top: 53px;
+      left: 0;
+      max-width: 360px;
+    }
+    &--bottom {
+      bottom: 63px;
+      right: -15px;
+      max-width: 336px; 
+    }
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 30px;
+    &--sm {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 15px;
+    font-weight: 300; 
+  }
+  &__info {
+    margin-top: 31px;
+    .key {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    .val {
+      font-size: 18px;
+      line-height: 22px;
+      border-bottom: 1px solid #fff;
+      font-weight: 300;
+      a {
+        color: #fff;
+        &:hover, &:active {
+          color: #fff;
+          text-decoration: none;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@include r-b(ipad) {
+  .about-sm-banner {
+    &__block {
+      &--top {
+        max-width: 342px;
+      }
+    }
+    &__text {
+      margin-top: 42px;
+    }
+  }
+}
+
+@include r-b(sm) {
+  .about-sm-banner {
+    padding: 37px 0 46px;
+    height: auto;
+    &:before {
+      width: 150px;
+      height: 150px;
+      top: auto;
+      bottom: 10px;
+    }
+    &:after {
+      width: 137px;
+      height: 137px;
+      bottom: 28%;
+      background-color: #DD5E71;
+    }
+    &__holder {
+      background-image: none;
+      height: auto;
+    }
+    &__block {
+      position: static;
+      max-width: 100%;
+      padding: 0;
+      &--bottom {
+        margin-top: 42px;
+      }
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &__text {
+      margin-top: 18px;
+    }
+    &__info {
+      margin-top: 18px;
+      .key {
+        padding-right: 17px;
+      }
+    }
+  }
+}

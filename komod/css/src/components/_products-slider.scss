@@ -24,9 +24,10 @@
   &__content {
     background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
     color: #fff;
-    //padding: 106px 20px 90px;
     padding: 106px 20px 94px;
     position: relative;
+    height: 426px;
+    overflow: hidden;
   }
   &__title {
     font-size: 36px;
@@ -96,6 +97,8 @@
     }
     &__content {
       padding-top: 65px;
+      padding-bottom: 54px;
+      height: 310px;
     }
     &__title {
       font-size: 24px;
@@ -139,7 +142,9 @@
     &__content {
       padding: {
         top: 38px;
+        bottom: 42px;
       }
+      height: 272px;
     }
     &__text {
       font-size: 12px;
@@ -206,7 +211,6 @@
   left: 0;
   width: 100%;
   top: 50%;
-  //transform: translateY(-50%);
   .slick-arrow {
     width: 91px;
     height: 91px;
@@ -216,6 +220,12 @@
     position: absolute;
     bottom: 0;
     padding: 26px;
+    &.slick-prev {
+      padding-right: 32px;
+    }
+    &.slick-next {
+      padding-left: 32px;
+    }
     cursor: pointer;
     * {
       width: 100%;
@@ -236,6 +246,12 @@
       width: 47px;
       height: 47px;
       padding: 13px;
+      &.slick-prev {
+        padding-right: 16px;
+      }
+      &.slick-next {
+        padding-left: 16px;
+      }
     }
   }
 }
@@ -246,6 +262,12 @@
       width: 31px;
       height: 31px;
       padding: 8px;
+      &.slick-prev {
+        padding-right: 10px;
+      }
+      &.slick-next {
+        padding-left: 10px;
+      }
     }
   }
 }

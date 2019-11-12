@@ -1,3 +1,20 @@
 .relative {
-    position: relative;
+  position: relative;
+}
+
+.lb {
+  &-b {
+    &-ipad {
+      display: none;
+      @include r-b(ipad) {
+        display: block;
+      }
+    }
+    &-sm {
+      display: none;
+      @include r-b(sm) {
+        display: block;
+      }
+    }
+  }
 }

@@ -1,0 +1,48 @@
+{% 
+  set headerNav = [
+    {
+      "title": "Главная",
+      "href": "index.html"
+    },
+    {
+      "title": "Меню",
+      "href": "menu.html"
+    },
+    {
+      "title": "Бонусы",
+      "href": "bonus.html"
+    },
+    {
+      "title": "О компании",
+      "href": "about.html"
+    },
+    {
+      "title": "Контакты",
+      "href": "contacts.html"
+    }
+  ]
+%}
+
+<div class="content-overlay js__overlay"></div>
+<header class="header">
+  <div class="container-outer header__container">
+    <a href="#" class="header-logo-wrapper">
+      <img src="img/logo-header.png" alt="Комод" class="header-logo">
+    </a>
+    <nav class="header-nav">
+      <ul class="header-nav__list">
+        {% for item in headerNav %}
+          <li class="header-nav__list-item">
+            <a href="{{item.href}}" class="header-nav__link">{{item.title}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <button class="hamburger hamburger--elastic js__burger" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,212 @@
+/* Item */
+.gallery {
+  margin-top: 35px;
+  &__item {
+    height: 0;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    box-shadow: 7px 13px 30px rgba(0, 0, 0, 0.35);
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    outline: none !important;
+    transition: 0.3s ease;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 88px;
+      height: 88px;
+      background-image: url(../img/zoom.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      bottom: 10px;
+      right: 10px;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+    &:hover {
+      transform: scale(1.05);
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include r-b(sm) {
+  .gallery {
+    margin-top: 28px;
+  }
+}
+/* !Item */
+
+/* Slider */
+.gallery-slider-nav {
+  display: none;
+  &__num {
+    font-size: 48px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #f2be43;
+    opacity: 0.5;
+    transition: 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__dots {
+    * {
+      outline: none !important;
+    }
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+      margin: 0 20px;
+      text-align: center;
+      li {
+        display: inline-block;
+        &.slick-active {
+          button {
+            background-color: #f2be43;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      button {
+        background: transparent;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        line-height: 0;
+        border: 1px solid #f2be43;
+        border-radius: 50%;
+        display: block;
+        padding: 0;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
+
+@include r-b(sm) {
+  .gallery-slider-nav {
+    display: block;
+  }
+}
+/* !Slider */
+
+/* Popup */
+.gallery-popup {
+  .fancybox-bg {
+    background: #000000;
+    opacity: 0.85;
+  }
+  [data-fancybox-prev],
+  [data-fancybox-next],
+  [data-fancybox-close] {
+    opacity: 1;
+  }
+  &__prev,
+  &__next {
+    width: 91px;
+    height: 91px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 99995;
+    outline: none !important;
+  }
+  &__prev {
+    background-image: url(../img/popup-arrow-left.svg);
+    left: 70px;
+  }
+  &__next {
+    background-image: url(../img/popup-arrow-right.svg);
+    right: 70px;
+  }
+  &__close {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/popup-close.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    z-index: 99995;
+    outline: none !important;
+  }
+  &__pagination {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  &__num {
+    font-size: 48px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #f2be43;
+    opacity: 0.5;
+    transition: 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: -38px;
+  }
+  .fancybox-inner {
+    right: 0;
+  }
+  .fancybox-thumbs {
+    background: transparent;
+    top: auto;
+    width: auto;
+    right: 50%;
+    bottom: 60px;
+    transform: translateX(50%);
+    &__list { 
+      text-align: center;
+      a {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        float: none;
+        background: transparent!important;
+        border: 1px solid #F2BE43;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+        &.fancybox-thumbs-active {
+          background: #F2BE43!important;
+        }
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@include r-b(md) {
+  .gallery-popup {
+    [data-fancybox-prev],
+    [data-fancybox-next] {
+      display: none;
+    }
+  }
+}
+/* !Popup */

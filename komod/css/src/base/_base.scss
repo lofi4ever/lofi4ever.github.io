@@ -16,6 +16,16 @@
   @include r-b(sm) {
     padding: 0 18px;
   }
+
+  &--fill-tablet {
+    .container {
+      padding: 0 10px;
+      @include r-b(lg) {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  }
 }
 
 /* Sticky footer */
@@ -32,6 +42,8 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   table-layout: fixed;
+  position: relative;
+  overflow: hidden;
 }
 
 .content-inner {

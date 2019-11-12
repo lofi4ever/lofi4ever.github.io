@@ -1,6 +1,20 @@
 .footer {
   &__inner {
     background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 314px;
+      height: 314px;
+      background-color: #BDFDF9;
+      border-radius: 50%;
+      bottom: -200px;
+      left: 50%;
+      transform: translateX(-318px);
+    }
   }
 }
 
@@ -140,6 +154,7 @@
   right: 40px;
   height: 100%;
   display: block;
+  background-color: #F6B943;
 }
 
 .logo-footer {
@@ -151,7 +166,15 @@
 }
 
 @include r-b(lg) {
-  
+  .footer {
+    &__inner {
+      &:after {
+        transform: translateX(-74px);
+        bottom: -248px;
+      }
+    }
+  }
+
   .footer-col {
     padding: {
       top: 33px;
@@ -194,6 +217,9 @@
     &__inner {
       background: linear-gradient(90deg, #543331 -0.94%, #663B3A 100%);
       padding-bottom: 50px;
+      &:after {
+        content: none;
+      }
     }
   }
 
@@ -233,6 +259,7 @@
   
   .logo-footer {
     width: 48px;
+    left: 20px;
   }
 
   .footer-right-img {

@@ -1,0 +1,136 @@
+/* Banner */
+#about-banner {
+  &:before {
+    width: 50%;
+  }
+  &:after {
+    width: 50%;
+  }
+  .banner-circle {
+    width: 510px;
+    height: 510px;
+    left: 50%;
+    transform: translateX(-289px);
+    bottom: -50px;
+  }
+  .banner {
+    &__content {
+      transform: none;
+      top: 154px;
+    }
+    &__title {
+      white-space: nowrap;
+    }
+    &__img {
+      left: 30%;
+    }
+  }
+}
+
+@include r-b(ipad) {
+  #about-banner {
+    height: 510px;
+    .banner-circle {
+      transform: translateX(-134px);
+      bottom: -140px;
+    }
+    .banner {
+      &__content {
+        right: auto;
+        left: 0;
+      }
+      &__title {
+        right: auto;
+        left: 0;
+        margin-left: -8px;
+      }
+      &__img {
+        width: 448px;
+        left: 47%;
+      }
+    }
+  }
+}
+
+@include r-b(sm) {
+  #about-banner {
+    height: 370px;
+    .banner-circle {
+      width: 346px;
+      height: 346px;
+      bottom: -246px;
+      transform: translateX(-172px);
+    }
+    .banner {
+      &__content {
+        top: 126px;
+      }
+      &__title {
+        font-size: 48px;
+        line-height: 38px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+/* !Banner */
+
+/* Sections */
+#about-section {
+  &--01 {
+    padding-bottom: 161px;
+    padding-top: 53px;
+  }
+  &--03 {
+    padding-top: 110px;
+  }
+  &--04 {
+    padding-bottom: 130px;
+  }
+}
+
+@include r-b(ipad) {
+  #about-section {
+    &--01 {
+      padding-bottom: 131px;
+    }
+    &--03 {
+      padding-top: 150px;
+    }
+    &--04 {
+      padding-top: 75px;
+      padding-bottom: 88px;
+    }
+  }
+}
+
+@include r-b(sm) {
+  #about-section {
+    &--01 {
+      padding-top: 16px;
+      padding-bottom: 29px;
+      .common-title {
+        font-size: 36px;
+        line-height: 45px;
+      }
+    }
+    &--03 {
+      padding-top: 69px;
+      & > .container-outer {
+        padding: 0;
+      }
+    }
+    &--04 {
+      padding-top: 52px;
+      padding-bottom: 67px;
+      .common-title {
+        font-size: 36px;
+        line-height: 45px;
+      }
+      & > .container-outer {
+        padding: 0 10px;  
+      }
+    }
+  }
+}
+/* !Sections */

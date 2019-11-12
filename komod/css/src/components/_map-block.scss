@@ -1,0 +1,149 @@
+.map-wrapper {
+  display: flex;
+  min-height: 820px;
+  background: linear-gradient(90deg, #382121 -0.94%, #5C3836 25.35%);
+  overflow: hidden;
+  .map {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  .map-content {
+    width: 50%;
+  }
+}
+
+.map-content {
+  color: #fff;
+  padding: 54px 25px 35px 167px;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background-color: #F0BD53;
+    top: -70px;
+    left: -80px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    background-color: #DD5E71;
+    right: -120px;
+    bottom: -150px;
+  }
+  &__holder {
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 47px;
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 13px;
+    font-weight: 300;
+  }
+  &__list {
+    margin-top: 44px;
+    padding-left: 11px;
+  }
+  &__list-item {
+    &:not(:first-child) {
+      margin-top: 52px;
+    }
+  }
+}
+
+.map-item {
+  display: flex;
+  opacity: 0.6;
+  cursor: pointer;
+  &.active {
+    opacity: 1;
+  }
+  &__icon {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    .ico-wrapper {
+      color: #fff;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  &__info {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    .key {
+      font-weight: 300;
+      padding-right: 2px;
+    }
+    a {
+      color: #fff;
+      &:hover, &:active {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include r-b(ipad) {
+  .map-content {
+    padding-left: 90px;
+    &:after {
+      right: -194px;
+    }
+  }
+}
+
+@include r-b(sm) {
+  .map-wrapper {
+    flex-direction: column-reverse;
+    .map {
+      width: 100%;
+      height: 470px;
+    }
+    .map-content {
+      width: 100%;
+    }
+  }
+
+  .map-content {
+    padding: {
+      top: 26px;
+      left: 20px;
+      right: 5px;
+    }
+    &:before, &:after {
+      content: none;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    &__description {
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 27px;
+    }
+    &__list {
+      margin-top: 66px;
+      padding-left: 0;
+    }
+  }
+}

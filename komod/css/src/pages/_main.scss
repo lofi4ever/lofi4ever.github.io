@@ -12,6 +12,22 @@
     }
     .banner-circle {
       bottom: 46px;
+      left: calc(50% + 240px);
+      transform: translateX(-50%);
+    }
+  }
+  &--02 {
+    .banner-circle {
+      left: calc(50% + 240px);
+      transform: translateX(-50%);
+      bottom: -60px;
+    }
+    .banner {
+      &__img {
+        width: 729px;
+        max-height: initial;
+        left: 45%;
+      }
     }
   }
 }
@@ -21,6 +37,28 @@
     &--01 {
       .banner-circle {
         bottom: 22px;
+        left: calc(50% + 168px);
+      }
+    }
+    &--02 {
+      .banner-circle {
+        width: 462px;
+        height: 462px;
+        bottom: -160px;
+        left: calc(50% + 175px);
+      }
+      .banner {
+        &__title {
+          padding-top: 28px;
+        }
+        &__list {
+          margin: 0;
+        }
+        &__img {
+          max-height: initial;
+          width: 552px;
+          left: 44%;
+        }
       }
     }
   }
@@ -30,12 +68,36 @@
   #main-banner {
     &--01 {
       .banner {
+        &__title {
+          &--lg {
+            font-size: 72px;
+            line-height: 42px;
+          }
+        }
         &__content {
           margin-top: 0;
         }
         &__img {
           left: 19%;
           max-width: 398px;      
+        }
+      }
+    }
+    &--02 {
+      .banner {
+        &__title {
+          padding-top: 0;
+        }
+        &__description {
+          margin-top: 20px;
+          line-height: 18px;
+          margin-bottom: 28px;
+          position: relative;
+          z-index: 1;
+        }
+        &__img {
+          width: 392px;
+          left: 16%;
         }
       }
     }
@@ -56,6 +118,12 @@
     &--01 {
       padding-top: 42px;
       padding-bottom: 55px;
+      .common-title {
+        @include r-b(ipad) {
+          font-size: 36px;
+          line-height: 45px;
+        }
+      }
     }
   }
 }

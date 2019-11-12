@@ -1,19 +1,15 @@
 /* Banner itself */
 .banner {
   color: #fff;
-  height: 100vh;
-  min-height: 894px;
-  max-height: 1080px;
-  background-color: hotpink;
   position: relative;
   overflow: hidden;
+  height: 600px;
   .banner-circle {
     width: 540px;
     height: 540px;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    bottom: -100px;
   }
   &:before,
   &:after {
@@ -32,58 +28,6 @@
     background: linear-gradient(270deg, #DD4658 18.75%, #DE6E81 100%);
     right: 0;
     width: 30%;
-  }
-  &--img-right {
-    &:before {
-      width: calc(50% + 240px);
-    }
-    &:after {
-      width: calc(50% - 240px);
-    }
-    .banner {
-      &__img {
-        right: 0;
-      }
-    }
-    .banner-circle {
-      left: calc(50% + 240px);
-      transform: translateX(-50%);
-    }
-  }
-  &--img-left {
-    &:before {
-      width: calc(50% - 240px);
-    }
-    &:after {
-      width: calc(50% + 365px);      
-    }
-    .banner {
-      &__img {
-        left: 0;
-      }
-    }
-  }
-  &--theme-1 {
-    &:before {
-      background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
-    }
-    &:after {
-      background: linear-gradient(270deg, #DD4658 18.75%, #DE6E81 100%);
-    }
-    .banner-circle {
-      background-color: #BDFFFB;
-    }
-  }
-  &--theme-2 {
-    &:before {
-      background: linear-gradient(270deg, #DE6E81 0%, #DD4658 77.08%);
-    }
-    &:after {
-      background: linear-gradient(90deg, #F3C963 0%, #EEB64A 60.94%);
-    }
-    .banner-circle {
-      background-color: #663B3A;
-    }
   }
   &__holder {
     position: relative;
@@ -104,10 +48,17 @@
     font-weight: 700;
     font-size: 144px;
     line-height: 120px;
+    margin-left: -8px;
     &--lg {
       font-size: 176px;
-      text-transform: uppercase;
       margin-bottom: 10px;
+      margin-left: -10px;
+    }
+    &--uppercase {
+      text-transform: uppercase;
+    }
+    .visible-mobile {
+      display: none;
     }
   }
   &__description {
@@ -134,24 +85,124 @@
       top: 0;
     }
   }
+  &--fullscreen {
+    height: 100vh;
+    min-height: 780px;
+    //max-height: 1080px;
+    max-height: 900px;
+  }
+  &--img-right {
+    &:before {
+      width: calc(50% + 240px);
+    }
+    &:after {
+      width: calc(50% - 240px);
+    }
+    .banner {
+      &__img {
+        right: 0;
+      }
+    }
+  }
+  &--img-left {
+    &:before {
+      width: calc(50% - 240px);
+    }
+    &:after {
+      width: calc(50% + 240px);
+    }
+    .banner {
+      &__img {
+        left: 0;
+      }
+      &__title {
+        &--lg {
+          margin-right: -10px;
+        }
+      }
+      &__content {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  &--theme-1 {
+    &:before {
+      background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
+    }
+    &:after {
+      background: linear-gradient(270deg, #DD4658 18.75%, #DE6E81 100%);
+    }
+    .banner-circle {
+      background-color: #BDFFFB;
+    }
+  }
+  &--theme-2 {
+    &:before {
+      background: linear-gradient(270deg, #DE6E81 0%, #DD4658 77.08%);
+    }
+    &:after {
+      background: linear-gradient(90deg, #F3C963 0%, #EEB64A 60.94%);
+    }
+    .banner-circle {
+      background-color: #663B3A;
+    }
+  }
+  &--theme-3 {
+    &:before {
+      background: #BDFDF9;
+    }
+    &:after {
+      background: linear-gradient(90deg, #F3C963 0%, #EEB64A 60.94%);
+    }
+    .banner-circle {
+      background-color: #DD5E71;
+    }
+  }
+  &--theme-4 {
+    &:before {
+      background: linear-gradient(90deg, #382121 -0.94%, #5C3836 100%);
+    }
+    &:after {
+      background: linear-gradient(90deg, #F3C963 0%, #EEB64A 60.94%);
+    }
+    .banner-circle {
+      background: #DD5E71;
+    }
+  }
+}
+
+.js__slide-delay {
+  opacity: 0;
+  transition: .3s ease;
 }
 
 @include r-b(ipad) {
   .banner {
-    height: 640px;
-    min-height: 0;
+    height: 430px;
+    &--fullscreen {
+      height: 640px;
+      min-height: 0;
+    }
     .banner-circle {
       width: 400px;
       height: 400px;
     }
     &__title {
+      font-size: 96px;
+      line-height: 80px;
+      margin-left: 0;
       &--lg {
         font-size: 136px;
         line-height: 70px;
+        margin-left: 0;
       }
     }
     &__description {
       font-size: 24px;
+    }
+    &__list {
+      font-size: 36px;
     }
     &--img-right {
       &:before {
@@ -164,14 +215,40 @@
         left: calc(50% + 168px);
       }
     }
+    &--img-left {
+      &:before {
+        width: calc(50% - 168px);
+      }
+      &:after {
+        width: calc(50% + 166px);
+      }
+      .banner {
+        &__title {
+          &--lg {
+            margin-right: -8px;
+          }
+        }
+      }
+    }
   }
 }
 
 @include r-b(sm) {
   .banner {
-    height: 570px;
-    .banner-circle {
+    height: 220px;
+    &__img {
       display: none;
+    }
+    &--fullscreen {
+      height: 570px;
+      .banner-circle {
+        display: none;
+      }
+      .banner {
+        &__img {
+          display: block;
+        }
+      }
     }
     &__content {
       top: 110px;
@@ -183,13 +260,25 @@
       }
     }
     &__title {
+      font-size: 36px;
+      line-height: 30px;
       &--lg {
-        font-size: 72px;
-        line-height: 42px;
+        font-size: 56px;
+        line-height: 38px;
+      }
+      .visible-mobile {
+        display: block;
+      }
+      .visible-desktop {
+        display: none;
       }
     }
     &__description {
       font-size: 18px;
+    }
+    &__list {
+      font-size: 24px;
+      line-height: 30px;
     }
     &--img-right {
       &:before {
@@ -197,6 +286,25 @@
       }
       &:after {
         width: calc(50% - 50px);
+      }
+    }
+    &--img-left {
+      &:before {
+        width: calc(50% - 50px);
+      }
+      &:after {
+        width: calc(50% + 50px);
+      }
+      .banner {
+        &__content {
+          right: auto;
+          left: 0;
+        }
+        &__title {
+          &--lg {
+            margin-right: 0;
+          }
+        }
       }
     }
   }
@@ -272,6 +380,12 @@
       display: inline-block;
       cursor: pointer;
       transition: .3s ease;
+      &.slick-prev {
+        padding-right: 11px;
+      }
+      &.slick-next {
+        padding-left: 11px;
+      }
       &:first-child {
         margin-right: 35px;
       }

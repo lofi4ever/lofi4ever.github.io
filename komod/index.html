@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная</title>
     <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/vendor/hamburgers/hamburgers.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -13,6 +14,7 @@
     
     
 
+<div class="content-overlay js__overlay"></div>
 <header class="header">
   <div class="container-outer header__container">
     <a href="#" class="header-logo-wrapper">
@@ -22,27 +24,33 @@
       <ul class="header-nav__list">
         
           <li class="header-nav__list-item">
-            <a href="#" class="header-nav__link">Главная</a>
+            <a href="index.html" class="header-nav__link">Главная</a>
           </li>
         
           <li class="header-nav__list-item">
-            <a href="#" class="header-nav__link">Меню</a>
+            <a href="menu.html" class="header-nav__link">Меню</a>
           </li>
         
           <li class="header-nav__list-item">
-            <a href="#" class="header-nav__link">Бонусы</a>
+            <a href="bonus.html" class="header-nav__link">Бонусы</a>
           </li>
         
           <li class="header-nav__list-item">
-            <a href="#" class="header-nav__link">О компании</a>
+            <a href="about.html" class="header-nav__link">О компании</a>
           </li>
         
           <li class="header-nav__list-item">
-            <a href="#" class="header-nav__link">Контакты</a>
+            <a href="contacts.html" class="header-nav__link">Контакты</a>
           </li>
         
       </ul>
     </nav>
+
+    <button class="hamburger hamburger--elastic js__burger" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
   </div>
 </header>
     
@@ -52,23 +60,23 @@
 
   <div class="banner-slider-wrapper js__slider-banner-wrapper">
   <div class="js__slider-banner">
-    <div id="main-banner--01" class="banner banner--img-right banner--theme-1" data-slide-theme="1">
-      <div class="banner-circle"></div>
+    <div id="main-banner--01" class="banner banner--fullscreen banner--img-right banner--theme-1" data-slide-theme="1">
+      <div class="banner-circle js__slide-delay"></div>
       <div class="container-outer banner__holder">
-        <div class="banner__content">
-          <div class="banner__title banner__title--lg">Комод</div>
+        <div class="banner__content js__slide-delay">
+          <div class="banner__title banner__title--lg banner__title--uppercase">Комод</div>
           <div class="banner__description">Место встречи и общения</div>
           <a href="#" class="btn btn--common">Узнать о нас</a>
         </div>
-        <img src="img/main/banner-img-1.png" alt="" class="banner__img banner__img--bottom">
+        <img src="img/main/banner-img-1.png" alt="" class="banner__img banner__img--bottom js__slide-delay">
       </div>
     </div>
-    <div id="main-banner--02" class="banner banner--img-right banner--theme-2" data-slide-theme="2">
-      <div class="banner-circle"></div>
+    <div id="main-banner--02" class="banner banner--fullscreen banner--img-right banner--theme-2" data-slide-theme="2">
+      <div class="banner-circle js__slide-delay"></div>
       <div class="container-outer banner__holder">
-        <div class="banner__content">
+        <div class="banner__content js__slide-delay">
           <div class="banner__title">Растительное молоко</div>
-          <div class="banner__description">В ваших любимых напитках</div>
+          <div class="banner__description">В&nbsp;ваших <br class="lb-b-sm"> любимых <br class="lb-b-sm"> напитках</div>
           <ul class="banner__list">
             <li>Овсяное</li>
             <li>Кокосовое</li>
@@ -76,7 +84,7 @@
             <li>Соевое</li>
           </ul>
         </div>
-        <img src="img/main/banner-img-2.png" alt="" class="banner__img banner__img--top">
+        <img src="img/main/banner-img-2.png" alt="" class="banner__img banner__img--top js__slide-delay">
       </div>
     </div>
   </div>
@@ -324,7 +332,9 @@
   <div class="footer__inner">
     <div class="container-outer relative">
 
-      <img src="img/logo-footer.png" alt="" class="logo-footer">
+      <a href="/index.html">
+        <img src="img/logo-footer.png" alt="" class="logo-footer">
+      </a>
 
       <div class="container">
         <div class="footer-col-wrapper footer-desktop">
@@ -650,7 +660,7 @@
         </div>
       </div>
 
-      <img src="img/footer-person.jpg" class="footer-right-img" alt="">
+      <img src="img/footer-person.png" class="footer-right-img" alt="">
 
     </div>
   </div>
@@ -659,6 +669,8 @@
   </div>
     
   <script src="js/libs.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3333d396-c99a-44e7-b235-16170b9b34e7&lang=ru_RU" type="text/javascript">
+  </script>
   <script src="js/common.js"></script>
 </body>
 </html>
