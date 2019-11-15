@@ -170,6 +170,17 @@
       background: #DD5E71;
     }
   }
+  &--theme-5 {
+    &:before {
+      background: linear-gradient(270deg, #DE6E81 -4.93%, rgba(221, 70, 88, 0.78) 18.04%, #DD4658 81.32%);
+    }
+    &:after {
+      background: linear-gradient(89.53deg, #5C3836 74.52%, #382121 128.24%);
+    }
+    .banner-circle {
+      background: #F3C963;
+    }
+  }
 }
 
 .js__slide-delay {
