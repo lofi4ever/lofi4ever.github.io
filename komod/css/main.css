@@ -2823,7 +2823,6 @@ body {
 
   .product-card__content {
     padding: 84px 20px 65px;
-    height: 395px;
   }
 
   /* !MAIN: Products */
@@ -3469,6 +3468,10 @@ body {
 }
 
 @media (max-width: 991px) {
+  .product-card__content {
+    height: 328px;
+  }
+
   .feedback-block__half--left {
     padding-right: 42px;
     padding-left: 56px;

@@ -136,6 +136,14 @@
   }
 }
 
+@include r-b(md) {
+  .product-card  {
+    &__content {
+      height: 328px;
+    }
+  }
+}
+
 @include r-b(sm) {
   .product-card {
     &__img {
