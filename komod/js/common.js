@@ -1,4 +1,17 @@
-var ellipsis = function(options) {
+var isIE = (function checkIE() {
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
+  var result;
+
+  if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+    result = true;
+    console.log('IE confirmed');
+  }
+  
+  return result;
+})();
+
+var ellipsis = function (options) {
   var $elements = options.elements,
     length = options.length,
     readMoreClassName = options.readMoreClassName || "ellipsis-more";
@@ -7,25 +20,25 @@ var ellipsis = function(options) {
     return;
   }
 
-  $elements.each(function(_, one) {
+  $elements.each(function (_, one) {
     var text = $(one).text();
-      initialized = false;
+    initialized = false;
 
     //check if responsive
     if (Object.prototype.toString.call(length) === "[object Array]") {
-      length.sort(function(a, b) {
+      length.sort(function (a, b) {
         return a - b;
       });
       var result = initResponsive(one, length, text);
-      if(result !== false) {
+      if (result !== false) {
         initialized = true;
       }
-      $(window).on("resize orientationchange", function() {
+      $(window).on("resize orientationchange", function () {
         if (initialized) {
           destroy(one, text);
         }
         var result = initResponsive(one, length, text);
-        if(result !== false) {
+        if (result !== false) {
           initialized = true;
         }
       });
@@ -66,9 +79,9 @@ var ellipsis = function(options) {
     }
 
     var visiblePart = $("<span/>", {
-        class: "ellipsis__visible",
-        text: split.visible
-      }),
+      class: "ellipsis__visible",
+      text: split.visible
+    }),
       hiddenPart = $("<span/>", {
         class: "ellipsis__hidden",
         text: split.hidden,
@@ -84,7 +97,7 @@ var ellipsis = function(options) {
       isTruncated = true; //save current state
 
     //show/hide handler
-    readMore.on("click", function() {
+    readMore.on("click", function () {
       !isTruncated ? truncate.call(this) : restore.call(this);
     });
 
@@ -146,22 +159,21 @@ var ellipsis = function(options) {
   }
 };
 
-$(function() {
+$(function () {
   svg4everybody(); //svg in IE
 
   /* Smooth scroll to anchor */
-  (function() {
+  (function () {
     var $links = $('.js__anchor');
-    if(!$links.length) return;
-    $links.on('click', function(e) {
+    if (!$links.length) return;
+    $links.on('click', function (e) {
       e.preventDefault();
       var href = $(this).attr('href'),
-          $target = $(href);
-          //debugger;
-      if(!$target.length) return;
+        $target = $(href);
+      if (!$target.length) return;
       $('html, body').animate({
         scrollTop: $target.offset().top
-      }, 750, function() {
+      }, 750, function () {
         window.location.hash = href;
       });
     });
@@ -169,7 +181,7 @@ $(function() {
   /* !Smooth scroll to anchor */
 
   /* Trancate */
-  (function() {
+  (function () {
     var $elemsSM = $(".js__truncate--sm");
     if ($elemsSM.length) {
       ellipsis({
@@ -181,23 +193,18 @@ $(function() {
           }
         ]
       });
-
-      // ellipsis({
-      //   elements: $elemsSM,
-      //   length: 300
-      // });
     }
   })();
   /* !Trancate */
 
   /* Burger */
-  (function() {
+  (function () {
     var $burger = $(".js__burger"),
       isOpen = false,
       $layout = $(".layout"),
       $overlay = $(".js__overlay");
 
-    $burger.on("click", function() {
+    $burger.on("click", function () {
       isOpen ? closeMenu() : openMenu();
     });
 
@@ -218,10 +225,10 @@ $(function() {
   /* !Burger */
 
   /* Banner slider */
-  (function() {
+  (function () {
     var $sliderWrappers = $(".js__slider-banner-wrapper");
     if (!$sliderWrappers.length) return;
-    $sliderWrappers.each(function(_, one) {
+    $sliderWrappers.each(function (_, one) {
       var $root = $(one),
         $slider = $root.find(".js__slider-banner"),
         $navigation = $root.find(".js__slider-banner--nav"),
@@ -231,14 +238,14 @@ $(function() {
         $numBlock = $root.find(".js__slider-banner--num");
 
       //events
-      $slider.on("init", function(e, slick) {
+      $slider.on("init", function (e, slick) {
         var $elems = $(slick.$slides[0]).find(".js__slide-delay");
         if ($elems.length) {
           $elems.css("opacity", "1");
         }
       });
 
-      $slider.on("beforeChange", function(e, slick, prev, next) {
+      $slider.on("beforeChange", function (e, slick, prev, next) {
         updateTheme(slick, next);
         updateNumber(next);
         var $elems = $(slick.$slides[prev]).find(".js__slide-delay");
@@ -247,7 +254,7 @@ $(function() {
         }
       });
 
-      $slider.on("afterChange", function(e, slick, current) {
+      $slider.on("afterChange", function (e, slick, current) {
         var $elems = $(slick.$slides[current]).find(".js__slide-delay");
         if ($elems.length) {
           $elems.css("opacity", "1");
@@ -274,6 +281,9 @@ $(function() {
       $slider.slick({
         arrows: true,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        pauseOnHover: false,
         prevArrow: $prevArrow,
         nextArrow: $nextArrow,
         appendDots: $dotsContainer
@@ -283,10 +293,9 @@ $(function() {
   /* !Banner slider */
 
   /* About slider */
-  (function() {
+  (function () {
     var $sliderWrapper = $(".js__about-slider-wrapper");
     if (!$sliderWrapper.length) return;
-    //debugger;
     var $slider = $sliderWrapper.find(".js__about-slider"),
       $prevArrow = $sliderWrapper.find(".js__about-slider--prev"),
       $nextArrow = $sliderWrapper.find(".js__about-slider--next"),
@@ -294,7 +303,7 @@ $(function() {
       $numBlock = $sliderWrapper.find(".js__about-slider--num");
 
     //events
-    $slider.on("beforeChange", function(e, slick, prev, next) {
+    $slider.on("beforeChange", function (e, slick, prev, next) {
       updateNumber(next);
     });
 
@@ -319,20 +328,20 @@ $(function() {
   /* !About slider */
 
   /* Gallery slider */
-  (function() {
+  (function () {
     var $sliderWrapper = $('.js__gallery-slider-wrapper');
-    if(!$sliderWrapper.length) return;
+    if (!$sliderWrapper.length) return;
     var $slider = $sliderWrapper.find('.js__gallery-slider'),
-        $numBlock = $sliderWrapper.find('.js__gallery-slider--num'),
-        $dots = $sliderWrapper.find('.js__gallery-slider---dots'),
-        $nav = $sliderWrapper.find('.js__gallery-slider--nav');
+      $numBlock = $sliderWrapper.find('.js__gallery-slider--num'),
+      $dots = $sliderWrapper.find('.js__gallery-slider---dots'),
+      $nav = $sliderWrapper.find('.js__gallery-slider--nav');
 
     //events
-    $slider.on("beforeChange", function(e, slick, prev, next) {
+    $slider.on("beforeChange", function (e, slick, prev, next) {
       updateNumber(next);
     });
 
-    $slider.on("destroy", function() {
+    $slider.on("destroy", function () {
       $nav.hide();
     })
 
@@ -351,7 +360,7 @@ $(function() {
       adaptiveHeight: true,
       appendDots: $dots,
       mobileFirst: true,
-      infinite:false,
+      infinite: false,
       responsive: [
         {
           breakpoint: 767,
@@ -363,9 +372,9 @@ $(function() {
   /* !Gallery slider */
 
   /* Gallery fancybox */
-  (function() {
+  (function () {
     var $links = $('[data-fancybox="gallery"]');
-    if(!$links.length) return;
+    if (!$links.length) return;
     $links.fancybox({
       thumbs: {
         autoStart: true,
@@ -377,59 +386,57 @@ $(function() {
         "close"
       ],
       baseTpl:
-    '<div class="fancybox-container" role="dialog" tabindex="-1">' +
-    '<div class="fancybox-bg"></div>' +
-    '<div class="fancybox-inner">' +
-    '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' +
-    '<div class="fancybox-toolbar">{{buttons}}</div>' +
-    '<div class="fancybox-navigation">{{arrows}}</div>' +
-    '<div class="fancybox-stage"></div>' +
-    '<div class="fancybox-caption"><div class=""fancybox-caption__body"></div></div>' +
-    '<div class="gallery-popup__pagination"><div class="gallery-popup__num js__gallery-popup--num"></div><div class="gallery-popup__dots js__gallery-popup--dots"></div></div>' +
-    '</div>' +
-    '</div>',
+        '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+        '<div class="fancybox-bg"></div>' +
+        '<div class="fancybox-inner">' +
+        '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' +
+        '<div class="fancybox-toolbar">{{buttons}}</div>' +
+        '<div class="fancybox-navigation">{{arrows}}</div>' +
+        '<div class="fancybox-stage"></div>' +
+        '<div class="fancybox-caption"><div class=""fancybox-caption__body"></div></div>' +
+        '<div class="gallery-popup__pagination"><div class="gallery-popup__num js__gallery-popup--num"></div><div class="gallery-popup__dots js__gallery-popup--dots"></div></div>' +
+        '</div>' +
+        '</div>',
       btnTpl: {
         close:
-      '<button data-fancybox-close class="gallery-popup__close fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
-      "</button>",
+          '<button data-fancybox-close class="gallery-popup__close fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+          "</button>",
 
-    // Arrows
-    arrowLeft:
-      '<button data-fancybox-prev class="gallery-popup__prev" title="{{PREV}}">' +
-      "</button>",
+        // Arrows
+        arrowLeft:
+          '<button data-fancybox-prev class="gallery-popup__prev" title="{{PREV}}">' +
+          "</button>",
 
-    arrowRight:
-      '<button data-fancybox-next class="gallery-popup__next" title="{{NEXT}}">' +
-      "</button>",
+        arrowRight:
+          '<button data-fancybox-next class="gallery-popup__next" title="{{NEXT}}">' +
+          "</button>",
       },
-      beforeShow: function(instance, current) {
+      beforeShow: function (instance, current) {
         var $root = $(instance.$refs.bg[0]).parent(),
-            $num = $root.find('.js__gallery-popup--num'),
-            $dots = $root.find('.js__gallery-popup--dots'),
-            index = current.index + 1;
-        if(index < 10) {
+          $num = $root.find('.js__gallery-popup--num'),
+          index = current.index + 1;
+        if (index < 10) {
           $num.text('0' + index);
         } else {
           $num.text(index);
         }
-        //debugger;
       }
     });
   })();
   /* !Gallery fancybox */
 
   /* More/less */
-  (function() {
+  (function () {
     var $links = $(".js__more-less");
     if (!$links.length) return;
-    $links.each(function(_, link) {
+    $links.each(function (_, link) {
       var isActive = false,
         $items = $(link)
           .parent()
           .find(".js__more-less--item"),
         $slider = $(this).closest(".js__about-slider");
       if (!$items.length) return;
-      $(link).on("click", function(e) {
+      $(link).on("click", function (e) {
         e.preventDefault();
         if (!isActive) {
           $items.removeClass("hidden-xs");
@@ -451,7 +458,6 @@ $(function() {
           isActive = false;
         }
         if ($slider.length) {
-          //$slider.slick('slickSetOption', null, null, true);
           $slider.find(".slick-list").height("auto");
         }
       });
@@ -460,18 +466,22 @@ $(function() {
   /* !More/less */
 
   /* Product slider */
-  (function() {
+  (function () {
     var $sliderWrappers = $(".js__products-slider-wrapper");
     if (!$sliderWrappers.length) return;
-    $sliderWrappers.each(function(_, one) {
+    $sliderWrappers.each(function (_, one) {
       var $root = $(one),
-        $slider = $root.find(".js__products-slider");
+        $slider = $root.find(".js__products-slider"),
+        useTransform = !isIE; //css transform causes some problems in IE
+
+      //debugger;
 
       $slider.slick({
         slidesToShow: 3,
         arrows: true,
         dotts: false,
-        useTransform: false, //fix IE overflow bug
+        useTransform: useTransform,
+        swipeToSlide: true,
         prevArrow: $root.find(".js__products-slider--prev"),
         nextArrow: $root.find(".js__products-slider--next"),
         responsive: [
@@ -488,7 +498,7 @@ $(function() {
   /* !Product slider */
 
   /* Contacts map */
-  (function() {
+  (function () {
     if (!$("#map").length) return;
 
     var $addressItems = $(".js__map-item"),
@@ -512,7 +522,7 @@ $(function() {
         controls: []
       });
 
-      $addressItems.on("click", function() {
+      $addressItems.on("click", function () {
         var lat = +$(this).attr("data-lat"),
           lng = +$(this).attr("data-lng");
         if (!lat || !lng) return;
@@ -525,17 +535,16 @@ $(function() {
   /* !Contacts map */
 
   /* Select */
-  (function() {
+  (function () {
     var $selects = $(".js__select");
     if (!$selects.length) return;
 
-    $selects.each(function(_, select) {
+    $selects.each(function (_, select) {
       initSelect(select);
     });
 
     function initSelect(el) {
-      setWidth(el);
-      el.addEventListener("click", function(e) {
+      el.addEventListener("click", function (e) {
         e.preventDefault();
         this.classList.toggle("open");
         if (e.target.classList.contains("js__select--option")) {
@@ -545,13 +554,12 @@ $(function() {
           this.querySelector(".js__select--insert").textContent = text;
           [].forEach.call(
             this.querySelectorAll(".js__select--option"),
-            function(option) {
+            function (option) {
               option === e.target
                 ? option.classList.add("active")
                 : option.classList.remove("active");
             }
           );
-          setWidth(el);
         }
         document.body.addEventListener("click", function closeSelect(e) {
           if (el.contains(e.target)) return;
@@ -559,23 +567,16 @@ $(function() {
           document.body.removeEventListener("click", closeSelect);
         });
       });
-
-      function setWidth(el) {
-        var width = el.offsetWidth;
-        el.style.width = width + "px";
-        el.querySelector(".js__select--body").style.width = width + "px";
-      }
     }
   })();
   /* !Select */
 
   /* Accordeon */
-  (function() {
+  (function () {
     var $items = $(".js__accordeon");
     if (!$items.length) return;
-    $items.on("click", function(e) {
+    $items.on("click", function (e) {
       if ($(e.target).closest(".js__accordeon--item").lenght) return; //TODO
-      //debugger;
       $(this)
         .find(".js__accordeon--item")
         .toggleClass("hidden");
