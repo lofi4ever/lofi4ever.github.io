@@ -86,6 +86,17 @@
   .menu-img-absolute {
     display: none;
   }
+  .menu-description {
+    p {
+      margin: 21px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 /* !Common */
 
@@ -135,6 +146,10 @@
   @include r-b(sm) {
     color: #000;
     padding: 37px 0 127px;
+    background-image: url(../img/menu/menu-sm-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right 40px;
     .menu-block {
       &__bg {
         background-image: none;
@@ -168,8 +183,8 @@
       img {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        transform: translateY(-50%);
         max-width: 100%;
         max-height: 100%;
       }
@@ -247,6 +262,10 @@
   @include r-b(sm) {
     padding-top: 37px;
     padding-bottom: 57px;
+    background-image: url(../img/menu/menu-sm-2.png);
+    background-size: 220px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
     .menu-block {
       &__wrapper {
         min-height: auto;
@@ -329,12 +348,13 @@
     .menu-block {
       &__bottom {
         &:before {
-          left: 0;
-          right: 0;
           transform: none;
-          height: 89px;
+          height: 104px;
           width: 100%;
           background-size: auto 100%;
+          bottom: -13px;
+          left: auto;
+          right: -20px;
         }
         &:after {
           content: none;
@@ -366,7 +386,7 @@
     }
     &__wrapper {
       &--1 {
-        min-height: 587px;
+        height: 587px;
       }
     }
     &__content {
@@ -381,13 +401,13 @@
         display: block;
         position: absolute;
         bottom: 0;
-        width: 800px;
-        height: 600px;
+        width: 958px;
+        height: 810px;
         background-image: url(../img/menu/menu-6.png);
         background-repeat: no-repeat;
-        background-position: left 44px;
-        left: -253px;
-        background-size: 888px;
+        background-position: left -113px;
+        left: -310px;
+        background-size: 100%;
       }
     }
   }
@@ -409,6 +429,44 @@
         &--2 {
           padding: 44px 0 56px;
         }
+      }
+      &__bg {
+        &:before {
+          background-position: left 111px;
+          left: -130px;
+          width: 674px;
+        }
+      }
+    }
+  }
+
+  @include r-b(sm) {
+    .menu-block {
+      &__wrapper--1 {
+        min-height: 0;
+      }
+      &__top {
+        padding-top: 38px;
+        padding-bottom: 136px;
+        background-image: url(../img/menu/menu-sm-3.png);
+        background-repeat: no-repeat;
+        background-position: 80% center;
+        .menu-block__content {
+          margin-top: 0;
+        }
+      }
+      &__content--2 {
+        padding: 17px 0 136px;
+      }
+      &__bg {
+        &:before {
+          content: none;
+        }
+      }
+      &__bottom {
+        background: url(../img/menu/menu-6.png) -40px 69px, linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -448,6 +506,24 @@
       }
     }
   }
+
+  @include r-b(sm) {
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-image: url(../img/menu/menu-sm-4.png);
+    background-size: 132px;
+    background-position: right center;
+    .menu-block {
+      &__wrapper {
+        padding: 48px 0 107px;
+      }
+      &__content {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
 }
 /* !06 */
 
@@ -476,6 +552,23 @@
     .menu-block {
       &__wrapper {
         padding: 53px 0 106px;
+      }
+    }
+  }
+
+  @include r-b(sm) {
+    border-radius: 0;
+    box-shadow: none;
+    background: url(../img/menu/menu-sm-5.png) 270px, linear-gradient(90deg, #F3C963 0%, #EEB64A 41.02%); 
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    .menu-block {
+      &__wrapper {
+        padding-top: 16px;
+        padding-bottom: 128px;
+      }
+      &__content {
+        margin-right: 0;
       }
     }
   }
@@ -512,5 +605,30 @@
 
   @include r-b(sm) {
     line-height: 30px;
+    margin-top: 30px;
+    &__links {
+      margin-top: 12px;
+      line-height: normal;
+      a:not(:first-child) {
+        margin-left: 84px;
+      }
+    }
+  }
+}
+
+@include r-b(sm) {
+  #menu-section {
+    .container {
+      padding-left: 28px;
+      padding-right: 28px;
+      [class*=col-] {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .container-outer {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

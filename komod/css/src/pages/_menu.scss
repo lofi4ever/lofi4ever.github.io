@@ -112,6 +112,12 @@
 @include r-b(lg) {
     #menu-section {
         padding-bottom: 56px;
-    }   
+    }
+}
+
+@include r-b(sm) {
+  #menu-section {
+    padding-bottom: 46px;
+  }
 }
 /* !Sections */
