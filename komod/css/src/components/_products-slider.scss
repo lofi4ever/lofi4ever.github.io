@@ -88,6 +88,14 @@
   }
 }
 
+@include r-b(lg) {
+  .product-card {
+    &__content {
+      padding-top: 80px;
+    }
+  }
+}
+
 @include r-b(ipad) {
   .product-card {
     &__img {

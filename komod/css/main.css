@@ -2889,6 +2889,10 @@ body {
     width: 88px;
   }
 
+  .product-card__content {
+    padding-top: 80px;
+  }
+
   .bonus-block--2 .bonus-block__content {
     margin-right: 0;
   }
