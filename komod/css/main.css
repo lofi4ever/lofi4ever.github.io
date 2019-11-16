@@ -130,7 +130,9 @@ h4 {
   text-decoration: none;
 }
 
-.header-nav__link:hover {
+.header-nav__link:hover,
+.header-nav__link:focus,
+.header-nav__link:active {
   border-color: #fff;
   color: #fff;
   text-decoration: none;
@@ -786,6 +788,23 @@ body {
 }
 
 .banner-slider-nav[data-nav-theme="2"] .banner-slider-nav__buttons .slick-arrow {
+  color: #FBC64C;
+  background-color: #DD4658;
+}
+
+.banner-slider-nav[data-nav-theme="3"] .banner-slider-nav__dots ul li.slick-active button {
+  background-color: #DD4658;
+}
+
+.banner-slider-nav[data-nav-theme="3"] .banner-slider-nav__dots ul button {
+  border-color: #DD4658;
+}
+
+.banner-slider-nav[data-nav-theme="3"] .banner-slider-nav__num {
+  color: #DD4658;
+}
+
+.banner-slider-nav[data-nav-theme="3"] .banner-slider-nav__buttons .slick-arrow {
   color: #FBC64C;
   background-color: #DD4658;
 }
@@ -1989,8 +2008,9 @@ body {
 
 .franchising-block__note .val a:hover,
 .franchising-block__note .val a:active {
-  color: #000;
+  color: #fff;
   border-color: transparent;
+  text-decoration: none;
 }
 
 /* Item */
@@ -2163,6 +2183,7 @@ body {
   transform: translateY(-50%);
   padding: 0 10px;
   max-width: 100%;
+  z-index: 99999;
 }
 
 .gallery-popup__num {
@@ -2584,9 +2605,52 @@ body {
 }
 
 #main-banner--02 .banner__img {
-  width: 729px;
+  width: 770px;
   max-height: initial;
   left: 45%;
+}
+
+#main-banner--03 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(16.15%, #EEB64A), to(#F3C963));
+  background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
+}
+
+#main-banner--03:before,
+#main-banner--03:after {
+  content: none;
+}
+
+#main-banner--03 .banner-circle {
+  width: 857px;
+  height: 857px;
+  background-color: #5C3836;
+  bottom: -130px;
+  left: 50%;
+  -webkit-transform: translateX(-308px);
+  transform: translateX(-308px);
+}
+
+#main-banner--03 .banner__content {
+  margin-top: -108px;
+}
+
+#main-banner--03 .banner__pre-title {
+  color: #E32646;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 45px;
+  margin-left: -4px;
+}
+
+#main-banner--03 .banner__title {
+  font-size: 124px;
+  line-height: 103px;
+  margin-left: -5px;
+  letter-spacing: 5px;
+}
+
+#main-banner--03 .banner__img {
+  right: 148px;
 }
 
 /* !Main banner */
@@ -2899,6 +2963,19 @@ body {
     padding: 53px 0 106px;
   }
 
+  #main-banner--03 .banner-circle {
+    width: 624px;
+    height: 624px;
+    -webkit-transform: translateX(-227px);
+    transform: translateX(-227px);
+    bottom: -80px;
+  }
+
+  #main-banner--03 .banner__img {
+    right: 112px;
+    width: 637px;
+  }
+
   #menu-section {
     padding-bottom: 56px;
   }
@@ -3167,8 +3244,43 @@ body {
 
   #main-banner--02 .banner__img {
     max-height: initial;
-    width: 552px;
+    width: 576px;
     left: 44%;
+  }
+
+  #main-banner--03 .banner-circle {
+    width: 624px;
+    height: 624px;
+    -webkit-transform: translateX(-227px);
+    transform: translateX(-227px);
+    bottom: -80px;
+  }
+
+  #main-banner--03 .banner__content {
+    margin-top: -96px;
+  }
+
+  #main-banner--03 .banner__pre-title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+
+  #main-banner--03 .banner__title {
+    font-size: 96px;
+    line-height: 80px;
+    margin-left: 0;
+    letter-spacing: 4px;
+  }
+
+  #main-banner--03 .banner__description {
+    margin-top: 6px;
+  }
+
+  #main-banner--03 .banner__img {
+    right: 112px;
+    width: 637px;
   }
 
   #main-section--01 {
@@ -4200,8 +4312,41 @@ body {
   }
 
   #main-banner--02 .banner__img {
-    width: 392px;
+    width: 412px;
     left: 16%;
+  }
+
+  #main-banner--03 .banner-circle {
+    display: block;
+    -webkit-transform: translateX(-151px);
+    transform: translateX(-151px);
+    bottom: -204px;
+  }
+
+  #main-banner--03 .banner__content {
+    margin-top: -29px;
+  }
+
+  #main-banner--03 .banner__pre-title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 18px;
+  }
+
+  #main-banner--03 .banner__title {
+    font-size: 64px;
+    line-height: 53px;
+    letter-spacing: 3px;
+  }
+
+  #main-banner--03 .banner__description {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 14px;
+  }
+
+  #main-banner--03 .banner__img {
+    right: -316px;
   }
 
   #contacts-banner .banner-circle {

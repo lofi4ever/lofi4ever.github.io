@@ -460,6 +460,33 @@
       }
     }
   }
+  &[data-nav-theme="3"] {
+    .banner-slider-nav {
+      &__dots {
+        ul {
+          li {
+            &.slick-active {
+              button {
+                background-color: #DD4658;
+              }
+            }
+          }
+          button {
+            border-color: #DD4658;
+          }
+        }
+      }
+      &__num {
+        color: #DD4658;
+      }
+      &__buttons {
+        .slick-arrow {
+          color: #FBC64C;
+          background-color: #DD4658;
+        }
+      }
+    }
+  }
 }
 
 @include r-b(ipad) {

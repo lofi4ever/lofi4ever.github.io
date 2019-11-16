@@ -71,8 +71,9 @@
         color: #fff;
         border-bottom: 1px solid #fff;
         &:hover, &:active {
-          color: #000;
-          border-color: transparent
+          color: #fff;
+          border-color: transparent;
+          text-decoration: none;
         }
       }
     }

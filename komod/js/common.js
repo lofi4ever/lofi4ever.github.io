@@ -351,6 +351,7 @@ $(function() {
       adaptiveHeight: true,
       appendDots: $dots,
       mobileFirst: true,
+      infinite:false,
       responsive: [
         {
           breakpoint: 767,
@@ -365,60 +366,10 @@ $(function() {
   (function() {
     var $links = $('[data-fancybox="gallery"]');
     if(!$links.length) return;
-    // $links.fancybox({
-    //   thumbs : {
-    //     autoStart : true,
-    //     axis      : 'x'
-    //   },
-    //   loop: true,
-    //   baseClass: 'gallery-popup',
-    //   buttons: [
-    //     "close"
-    //   ],
-    //   baseTpl:
-    // '<div class="fancybox-container" role="dialog" tabindex="-1">' +
-    // '<div class="fancybox-bg"></div>' +
-    // '<div class="fancybox-inner">' +
-    // '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' +
-    // '<div class="fancybox-toolbar">{{buttons}}</div>' +
-    // '<div class="fancybox-navigation">{{arrows}}</div>' +
-    // '<div class="fancybox-stage"></div>' +
-    // '<div class="fancybox-caption"><div class=""fancybox-caption__body"></div></div>' +
-    // '<div class="gallery-popup__pagination"><div class="gallery-popup__num js__gallery-popup--num"></div><div class="gallery-popup__dots js__gallery-popup--dots"></div></div>' +
-    // '</div>' +
-    // '</div>',
-    //   btnTpl: {
-    //     close:
-    //   '<button data-fancybox-close class="gallery-popup__close fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
-    //   "</button>",
-
-    // // Arrows
-    // arrowLeft:
-    //   '<button data-fancybox-prev class="gallery-popup__prev" title="{{PREV}}">' +
-    //   "</button>",
-
-    // arrowRight:
-    //   '<button data-fancybox-next class="gallery-popup__next" title="{{NEXT}}">' +
-    //   "</button>",
-    //   },
-    //   beforeShow: function(instance, current) {
-    //     var $root = $(instance.$refs.bg[0]).parent(),
-    //         $num = $root.find('.js__gallery-popup--num'),
-    //         $dots = $root.find('.js__gallery-popup--dots'),
-    //         index = current.index + 1;
-    //     if(index < 10) {
-    //       $num.text('0' + index);
-    //     } else {
-    //       $num.text(index);
-    //     }
-    //     //debugger;
-    //   }
-    // });
     $links.fancybox({
       thumbs: {
         autoStart: true,
         axis: 'x',
-        //parentEl: '.js__gallery-popup--dots'
       },
       loop: true,
       baseClass: 'gallery-popup',

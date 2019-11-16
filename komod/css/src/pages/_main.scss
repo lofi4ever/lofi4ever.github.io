@@ -24,9 +24,63 @@
     }
     .banner {
       &__img {
-        width: 729px;
+        width: 770px;
         max-height: initial;
         left: 45%;
+      }
+    }
+  }
+  &--03 {
+    background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
+    &:before, &:after {
+      content: none;
+    }
+    .banner-circle {
+      width: 857px;
+      height: 857px;
+      background-color: #5C3836;
+      bottom: -130px;
+      left: 50%;
+      transform: translateX(-308px);
+    }
+    .banner {
+      &__content {
+        margin-top: -108px;
+      }
+      &__pre-title {
+        color: #E32646;
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 45px;
+        margin-left: -4px;
+      }
+      &__title {
+        font-size: 124px;
+        line-height: 103px;
+        margin-left: -5px;
+        letter-spacing: 5px;
+      }
+      &__img {
+        right: 148px;
+      }
+    }
+  }
+}
+
+@include r-b(lg) {
+  #main-banner {
+    &--03 {
+      .banner-circle {
+        width: 624px;
+        height: 624px;
+        transform: translateX(-227px);
+        bottom: -80px;
+      }
+      .banner {
+        &__img {
+          right: 112px;
+          width: 637px;
+        }
       }
     }
   }
@@ -56,8 +110,40 @@
         }
         &__img {
           max-height: initial;
-          width: 552px;
+          width: 576px;
           left: 44%;
+        }
+      }
+    }
+    &--03 {
+      .banner-circle {
+        width: 624px;
+        height: 624px;
+        transform: translateX(-227px);
+        bottom: -80px;
+      }
+      .banner {
+        &__content {
+          margin-top: -96px;
+        }
+        &__pre-title {
+          font-size: 36px;
+          line-height: 36px;
+          margin-bottom: 30px;
+          margin-left: 0;
+        }
+        &__title {
+          font-size: 96px;
+          line-height: 80px;
+          margin-left: 0;
+          letter-spacing: 4px;
+        }
+        &__description {
+          margin-top: 6px;
+        }
+        &__img {
+          right: 112px;
+          width: 637px;
         }
       }
     }
@@ -96,8 +182,38 @@
           z-index: 1;
         }
         &__img {
-          width: 392px;
+          width: 412px;
           left: 16%;
+        }
+      }
+    }
+    &--03 {
+      .banner-circle {
+        display: block;
+        transform: translateX(-151px);
+        bottom: -204px;
+      }
+      .banner {
+        &__content {
+          margin-top: -29px;
+        }
+        &__pre-title {
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 18px;
+        }
+        &__title {
+          font-size: 64px;
+          line-height: 53px;
+          letter-spacing: 3px;
+        }
+        &__description {
+          font-size: 24px;
+          line-height: 24px;
+          margin-top: 14px;
+        }
+        &__img {
+          right: -316px;
         }
       }
     }
