@@ -422,7 +422,7 @@
       }
       &__wrapper {
         &--1 {
-          min-height: 502px;
+          height: 502px;
         }
       }
       &__content {
@@ -443,7 +443,7 @@
   @include r-b(sm) {
     .menu-block {
       &__wrapper--1 {
-        min-height: 0;
+        height: auto;
       }
       &__top {
         padding-top: 38px;

@@ -2874,7 +2874,7 @@ body {
   }
 
   #menu-block--05 .menu-block__wrapper--1 {
-    min-height: 502px;
+    height: 502px;
   }
 
   #menu-block--05 .menu-block__content--2 {
@@ -4076,7 +4076,7 @@ body {
   }
 
   #menu-block--05 .menu-block__wrapper--1 {
-    min-height: 0;
+    height: auto;
   }
 
   #menu-block--05 .menu-block__top {
