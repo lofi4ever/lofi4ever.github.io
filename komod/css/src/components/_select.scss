@@ -1,6 +1,6 @@
 .select {
   position: relative;
-  z-index: 100;
+  z-index: 9;
   cursor: pointer;
   &__header {
     position: relative;
@@ -67,12 +67,6 @@
           top: 16px;
           transition: .3s ease;
         }
-        // &:hover {
-        //   .ico {
-        //     fill: $accent;
-        //     stroke: $accent;
-        //   }
-        // }
       }
       &__body {
         border: 1px solid #e1e1e1;
