@@ -4,11 +4,6 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  &__container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .hamburger {
     display: none;
   }
@@ -24,6 +19,7 @@
     justify-content: space-between;
     margin-left: auto;
     padding-top: 32px;
+    margin-top: 0;
   }
   &__link {
     color: #fff;

@@ -4,6 +4,8 @@
   position: relative;
   overflow: hidden;
   height: 600px;
+  font-size: 14px;
+  line-height: 20px;
   .banner-circle {
     width: 540px;
     height: 540px;
@@ -323,12 +325,19 @@
 /* !Banner itself */
 
 /* Slider */
+.banner-slider-wrapper {
+  font-size: 0;
+  background: linear-gradient(90deg, #EEB64A 16.15%, #F3C963 100%);
+}
+
 .banner-slider-nav {
   position: absolute;
   padding: inherit;
   left: 0;
   width: 100%;
   bottom: 50px;
+  font-size: 14px;
+  line-height: 20px;
   &__item {
     &--left {
       float: left;

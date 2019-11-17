@@ -39,3 +39,17 @@ html, body {
     text-decoration: none;
   }
 }
+
+.slider-graceful-appear {
+  white-space: nowrap;
+  opacity: 0;
+  transition: .3s ease;
+  &.slick-initialized {
+    opacity: 1;
+  }
+  &__slide {
+    display: inline-block;
+    width: 100%;
+    white-space: normal
+  }
+}

@@ -11,8 +11,9 @@
     position: relative;
     img {
       max-width: 100%;
-      max-height: 100%;
+      //max-height: 100%;
       transform: translate(-50% ,78px);
+      max-height: calc(100% + 55px);
       display: block;
       margin: 0 auto;
       position: absolute;
@@ -87,6 +88,14 @@
   }
 }
 
+@include r-b(lg) {
+  .product-card {
+    &__content {
+      padding-top: 80px;
+    }
+  }
+}
+
 @include r-b(ipad) {
   .product-card {
     &__img {
@@ -127,12 +136,21 @@
   }
 }
 
+@include r-b(md) {
+  .product-card  {
+    &__content {
+      height: 328px;
+    }
+  }
+}
+
 @include r-b(sm) {
   .product-card {
     &__img {
       height: 150px;
       img {
         transform: translate(-50%, 38px);
+        max-height: calc(100% + 20px); 
       }
     }
     &__title {

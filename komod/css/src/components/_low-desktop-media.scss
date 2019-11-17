@@ -1,0 +1,33 @@
+@media(min-width: 1024px) and (max-height: 800px) {
+  /* MAIN: Banner */
+  #main-banner {
+    &--01 {
+      .banner-circle {
+        bottom: -60px;
+      }
+    }
+  }
+  /* !MAIN: Banner */
+
+  /* MAIN: Products */
+  .product-card {
+    &__img {
+      height: 245px;
+    }
+    &__content {
+      padding: 84px 20px 65px;
+      //height: 395px;
+    }
+  }
+  /* !MAIN: Products */
+
+  /* ABOUT: Slider */
+  .about-slider-block {
+    height: 690px;
+  }
+
+  .about-slide {
+    padding: 53px 90px 125px 79px;
+  }
+  /* !ABOUT: Slider */
+}
