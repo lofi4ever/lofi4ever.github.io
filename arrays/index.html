@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="v">
+    <div class="array">
+      <div class="array-item" v-for="(item, index) in array">
+        {{item}}
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="array">
+      <div class="array-item" v-for="(item, index) in newArray">
+        {{item}}
+      </div>
+    </div>
+  </div>
+
+  <!-- версия для разработки, отображает полезные предупреждения в консоли -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  <script>
+    var vm = new Vue({
+      el: "#v",
+      data: {
+        array: [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+      },
+      computed: {
+        newArray: function() {
+          var oldArr = this.array,
+              newArr = [];
+          var numOfItems = this.array.length,
+              NUM_OF_COLS = 3,
+              currentRow = 0,
+              offset = Math.ceil(numOfItems/NUM_OF_COLS) - 1;
+          oldArr.forEach(function(value, index) {
+            var modulo = index % NUM_OF_COLS,
+                desiredItem = null;
+
+            //debugger;
+            if(modulo === 0) {
+              desiredItem = oldArr[currentRow];
+              currentRow++;
+
+            } else {
+              desiredItem = oldArr[modulo*offset + currentRow];
+            }
+            if(desiredItem) {
+              newArr.push(desiredItem);
+            }
+          });
+          return newArr;
+        }
+      }
+    });
+  </script>
+
+  <style>
+    .array {
+      max-width: 500px;
+    }
+    .array-item {
+      display: inline-block;
+      width: 32%;
+    }
+  </style>
+
+</body>
+</html>
