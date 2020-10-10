@@ -1,0 +1,12 @@
+<section class="main-page__partners-section section">
+  <div class="section__inner container">
+    <h2 class="section__title title">Уже доверяют нам:</h2>
+    <div class="partner-block">
+      {% for i in range(1, 11) %}
+        <div class="partner-block__item partner">
+          <img src="img/main/partner-{{i}}.png" alt="partner" class="partner__img">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

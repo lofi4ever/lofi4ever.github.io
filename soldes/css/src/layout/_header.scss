@@ -1,0 +1,102 @@
+@mixin header-fixed() {
+  background-color: $c-gray;
+  position: fixed;
+}
+
+.burger {
+  background: transparent;
+  outline: none!important;
+  position: relative;
+  height: 1.6rem;
+  width: 4.2rem;
+  border: none;
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: .3rem;
+    left: 0;
+    width: 100%;    
+    background: $c-text;
+    transition: .3s ease;
+    transform-origin: top left;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+  &--active {
+    &:before {
+      transform: rotate(-45deg) translateY(20px) translateX(-10px);
+    }
+    &:after {
+      transform: rotate(45deg) translateY(-20px) translateX(-10px);
+    }
+  }
+}
+
+.header {
+  background-color: transparent;
+  color: $c-text;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3.6rem 0 2.6rem;
+  z-index: 100;
+  transition: background-color .3s ease;
+  &--fixed {
+    @include header-fixed();
+  }
+  &__align {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-wrapper {
+    margin-right: 6.1rem;
+  }
+  &__logo {
+    width: 10.8rem;
+  }
+  &__burger {
+    display: none;
+  }
+
+  @include respond-below(md) {
+    @include header-fixed();
+
+    &__align {
+      justify-content: space-between;
+    }
+    &__nav {
+      display: none;
+    }
+    &__burger {
+      display: block;
+    }
+  }
+}
+
+.header-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.8rem;
+  &__item {
+    &:not(:first-child) {
+      margin-left: 4.2rem;
+    }
+  }
+  &__link {
+    color: $c-text;
+    @include states() {
+      color: $c-blue;
+      transition: color .3s ease;
+      text-decoration: none;
+    }
+  }
+}

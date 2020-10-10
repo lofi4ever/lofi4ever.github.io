@@ -1,0 +1,82 @@
+.btn {
+  width: 36rem;
+  padding: 1.6rem;
+  text-align: center;
+  background: transparent;
+  border: 2px solid $c-blue;
+  color: $c-blue;
+  max-width: 100%;
+  font-size: 2.4rem;
+  display: inline-block;
+  font-weight: 500;
+  transition: .3s ease;
+  @include states() {
+    color: #fff;
+    background-color: $c-blue;
+  }
+  &--fill {
+    background-color: $c-blue;
+    color: $c-semi-gray;
+    @include states() {
+      background-color: $c-blue-1;
+      color: $c-semi-gray;
+    }
+  }
+  &--white {
+    background-color: $c-semi-gray;
+    color: $c-blue;
+    border-color: $c-semi-gray;
+    @include states() {
+      background-color: $c-gray;
+      color: $c-blue;
+      border-color: $c-gray;
+    }
+  }
+  &--yellow {
+    color: $c-semi-gray;
+    border-color: $c-yellow;
+    @include states() {
+      background-color: $c-yellow;
+      border-color: $c-yellow;
+      color: $c-text;
+    }
+  }
+
+  @include respond-below(md) {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.1rem;
+  }
+
+  @include states() {
+    text-decoration: none;
+  }
+}
+
+.add-link {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: $c-text;
+  transition: color .3s ease;
+  @include states() {
+    color: $c-blue;
+    text-decoration: none;
+  }
+  &__icon {
+    margin-right: 0.9rem;
+    color: $c-yellow;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  @include respond-below(md) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    &__icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}

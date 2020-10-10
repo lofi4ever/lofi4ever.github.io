@@ -1,0 +1,23 @@
+/* Bootstrap */
+@import './precompile-config';
+
+@import '../../node_modules/bootstrap/scss/_mixins';
+@import '../../node_modules/bootstrap/scss/_functions';
+@import '../../node_modules/bootstrap/scss/_variables';
+@import '../../node_modules/bootstrap/scss/_reboot';
+@import '../../node_modules/bootstrap/scss/_grid';
+@import '../../node_modules/bootstrap/scss/_utilities';
+/* !Bootstrap */
+
+//for fancybox to work
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers}); 
+}
+
+@import './libs/jquery.fancybox.min';
+
+@import 
+'../../node_modules/swiper/css/swiper.min'

@@ -1,0 +1,53 @@
+.product {
+  color: #fff;
+  background-color: $c-text;
+  background-size: cover;
+  background-position: center;
+  padding: 6.3rem 6.7rem 6.1rem 32%;
+  min-height: 44rem;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6%;
+    width: 20%;
+  }
+  &__header {
+    margin-bottom: 3rem;
+  }
+  &__buttons {
+    margin-top: 3.2rem;
+    max-width: 64rem;
+  }
+  &__button {
+    width: 100%;
+  }
+
+  @include respond-below(lg) {
+    padding: 3.6rem 2.5rem 3.6rem;
+    min-height: auto;
+    &:not(:last-child) {
+      margin-bottom: 1.8rem;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
+    &__img {
+      position: static;
+      width: 5.2rem;
+      margin-right: 1.2rem;
+      transform: none;
+    }
+    &__buttons {
+      > div:not(:last-child) {
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+}

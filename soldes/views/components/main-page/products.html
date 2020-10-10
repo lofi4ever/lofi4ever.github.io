@@ -1,0 +1,24 @@
+<section class="main-page__products-section section">
+  <div class="section__inner container">
+    <h2 class="section__title title">Наши продукты</h2>
+    <div class="product-block">
+      {% for i in range(1, 4) %}
+      <div class="product" style="background-image: url(img/main/product-block-{{i}}.png)"> 
+        <div class="product__header">
+          <img src="img/logo.svg" alt="logo" class="product__img">
+          <div class="product__title title-md title-md--white">Конструктор <br> прогресса</div>
+        </div>
+        <div class="product__description description description--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. elit, sed do eiusmod tempor incididunt ut labore et dolore magna d do eiusm liquaLorem ipsum</div>
+        <div class="row product__buttons">
+          <div class="col-md">
+            <button class="product__button btn btn--yellow">Заказать услугу</button>
+          </div>
+          <div class="col-md">
+            <button data-src="#popup-apply" data-base-class="popup-wide-wrapper" data-fancybox class="product__button btn btn--fill">Купить в один клик</button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

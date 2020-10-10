@@ -1,0 +1,153 @@
+@mixin decor-1($offsetX) {
+  width: 3.3rem;
+  height: 14rem;
+  transform: translateX(#{$offsetX}) skewX(-54deg);
+}
+
+@mixin decor-2($offsetX) {
+  width: 3.3rem;
+  height: 7rem;
+  transform: translateX(#{$offsetX}) skewX(-54deg);
+}
+
+.main-page {
+  background: $c-semi-gray;
+  .section {
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      z-index: 1;
+    }
+  }
+  &__banner-section {
+    
+  }
+  &__about-section {
+    padding: 20.5rem 0 20.5rem;
+    &:before {
+      top: 106rem;
+      left: 0!important;
+      transform: skewY(-36deg);
+      height: 74rem;
+      width: 100%;
+      background-color: $c-gray;
+    }
+    &:after {
+      @include decor-1(-73rem);
+      background-color: $c-blue;
+      top: 18.3rem;
+    }
+  }
+  &__goal-section {
+    padding-bottom: 16rem;
+    &:before {
+      @include decor-2(70rem);
+      top: -18rem;
+      background-color: $c-yellow;
+    }
+    &:after {
+      @include decor-2(-78rem);
+      bottom: 1rem;
+      background-color: $c-blue;
+    }
+  }
+  &__products-section {
+    padding-bottom: 16rem;
+    &:before {
+      @include decor-1(75rem);
+      top: 34rem;
+      background-color: $c-blue;
+    }
+    &:after {
+      @include decor-1(-78rem);
+      bottom: 66rem;
+      background-color: $c-yellow;
+    }
+  }
+  &__reviews-section {
+    padding-bottom: 16rem;
+    &:before {
+      @include decor-2(73rem);
+      top: 5rem;
+      background-color: $c-yellow;
+    }
+    &:after {
+      @include decor-2(-81rem);
+      bottom: 19rem;
+      background-color: $c-blue;
+    }
+  }
+  &__partners-section {
+    padding: 12rem 0 11rem;
+    background: $c-gray;
+  }
+  &__thanks-section {
+    padding: 11.6rem 0 9rem;
+    &:before {
+      @include decor-1(-80rem);
+      bottom: -7rem;
+      background-color: $c-yellow;
+    }
+    &:after {
+      @include decor-1(69rem);
+      top: -7rem;
+      background-color: $c-blue;
+    }
+  }
+  &__press-section {
+    padding: 12rem 0 9rem;
+    background: $c-gray;
+  }
+  &__subscribe-section {
+    padding: 8rem 0 5rem;
+    background-color: $c-blue;
+  }
+  &__feedback-section {
+    padding: 16rem 0 16rem;
+    &:before {
+      @include decor-2(73rem);
+      top: 7rem;
+      background-color: $c-yellow;
+    }
+    &:after {
+      @include decor-2(-81rem);
+      top: 35rem;
+      background-color: $c-blue;
+    }
+  }
+
+  @include respond-below(md) {
+    &__about-section {
+      padding: 2.4rem 0 5.4rem;
+    }
+    &__goal-section {
+      padding-bottom: 5.4rem;
+    }
+    &__products-section {
+      padding-bottom: 5.4rem;
+    }
+    &__reviews-section {
+      padding-bottom: 5.4rem;
+    }
+    &__partners-section {
+      padding: 5.4rem 0 4.5rem;
+      background: $c-gray;
+    }
+    &__thanks-section {
+      padding: 5.4rem 0 3.6rem;
+    }
+    &__press-section {
+      padding: 5.4rem 0 3.6rem;
+      background: $c-gray;
+    }
+    &__subscribe-section {
+      padding: 3.6rem 0 3.6rem;
+      background-color: $c-blue;
+    }
+    &__feedback-section {
+      padding: 5.4rem 0 5.4rem;
+    } 
+  }
+}

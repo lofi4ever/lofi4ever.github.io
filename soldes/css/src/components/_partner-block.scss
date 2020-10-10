@@ -1,0 +1,31 @@
+.partner-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-bottom: -4rem;
+  &__item {
+    width: 50%;
+    text-align: center; 
+    margin-bottom: 4rem;
+  }
+
+  @include respond-above(lg) {
+    &__item {
+      width: 20%;
+      margin-bottom: 3rem;
+      &:nth-child(5n) {
+        text-align: right;
+      }
+      &:nth-child(5n + 1) {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.partner {
+  &__img {
+    max-width: calc(100% - 2rem);
+  }
+}

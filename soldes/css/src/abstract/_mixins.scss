@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// Mixins.
+// -----------------------------------------------------------------------------
+
+// Bootstrap breakpoints.
+$breakpoints: (
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  //lg: 1024px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px,
+  max: 1920px
+);
+
+// @include respond-above(sm) {}
+@mixin respond-above($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// @include respond-below(sm) {}
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// @include respond-between(sm, md) {}
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map-has-key($breakpoints, $lower) == false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    @if (map-has-key($breakpoints, $upper) == false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+
+@mixin states() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content
+  }
+}

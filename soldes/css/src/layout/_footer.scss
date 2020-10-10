@@ -1,0 +1,97 @@
+.footer {
+  background-color: $c-text;
+  color: #fff;
+  &__top {
+    padding: 6.5rem 0 6.8rem;
+  }
+  &__bottom {
+    padding: 3rem 0 3.5rem;
+    border-top: 1px solid rgba($c-semi-gray, .1);
+  }
+  @include respond-below(md) {
+    &__top {
+      padding: 3rem 0 6rem;
+    }
+    &__socials {
+      margin-top: 1.5rem;
+    }
+    &__bottom {
+      padding: 1.8rem 0 2.6rem;
+    }
+  }
+}
+
+.footer-nav {
+  font-size: 1.2rem;
+  font-weight: 500;
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start; 
+  }
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+  &__list-link {
+    color: #fff;
+    @include states() {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  @include respond-above(md) {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    &__list {
+      justify-content: flex-start;
+      max-width: 100%;
+    }
+    &__list-item {
+      &:not(:last-child) {
+        margin-right: 5.4rem;
+      }
+    }
+  }
+}
+
+.footer-top {
+  &__align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include respond-below(md) {
+    &__align {
+      display: block;
+    }
+  }
+}
+
+.footer-bottom {
+  color: $c-gray-1;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  @include respond-below(md) {
+    font-size: 1.2rem;
+    &__item {
+      display: block;
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

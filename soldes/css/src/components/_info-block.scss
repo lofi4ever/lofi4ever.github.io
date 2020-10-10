@@ -1,0 +1,32 @@
+.info-block {
+  &__title {
+    font-size: 6.8rem;
+    line-height: 6.8rem;
+    color: $c-text;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+  }
+  &__description {
+    font-size: 2rem;
+  line-height: 2.4rem;
+  color: $c-text;
+  }
+  &__button-wrapper {
+    margin-top: 6.5rem;
+  }
+
+  @include respond-below(md) {
+    &--md-center {
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 1.8rem;
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+    }
+    &__description {
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+    }
+  }
+}

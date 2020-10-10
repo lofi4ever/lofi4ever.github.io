@@ -1,0 +1,19 @@
+.thank-block {
+  &__item {
+    margin-bottom: 3rem;
+  }
+
+  @include respond-below(md) {
+    &__item {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.thank {
+  display: block;
+  &__preview {
+    display: block;
+    width: 100%;
+  }
+}

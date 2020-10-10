@@ -1,0 +1,81 @@
+.main-slider {
+  position: relative;
+  &__controls {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+  }
+  &__control {
+    pointer-events: all;
+    position: absolute;
+    width: 18rem;
+    background-color: #fff;
+    display: block;
+    border: none;
+    outline: none!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ico {
+      color: $c-text;
+      width: 3rem;
+      height: 3rem;
+    }
+    &--left {
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+    &--right {
+      right: 0;
+      height: 18rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__slide {
+    transition: opacity .3s ease;
+    &:not(.current) {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @include respond-below(xxxl) {
+    &__control {
+      top: 50%;
+      transform: translateY(-50%);
+      height: 18rem;
+    }
+  }
+
+  @include respond-below(xl) {
+    &__controls {
+      height: 0;
+      width: 100%;
+      padding-top: 50%;
+      top: 10.6rem;
+    }
+  }
+
+  @include respond-below(lg) {
+    &__controls {
+      padding-top: 67.5%;
+    }
+  }
+
+  @include respond-below(md) {
+    &__control {
+      width: 5.4rem;
+      height: 5.4rem;
+      .ico {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<section class="main-page__press-section section">
+  <div class="section__inner container">
+    <div class="row no-gutters justify-content-between align-items-center section__title">
+      <div>
+        <h2 class="title">Пресс-центр</h2>
+      </div>
+      <div>
+        <a href="javascript:;" data-src="#popup-comment" data-base-class="popup-wide-wrapper" data-fancybox class="add-link">
+          <svg class="add-link__icon">
+            <use href="img/sprite.svg#ico-plus">        
+          </svg>
+          <span class="add-link__title">Предложить материал</span>
+        </a>
+      </div>
+    </div>
+    <div class="press-block">
+      <div class="row press-block__loaded">
+        <div class="col-lg-6 press-block__item-wrapper d-none d-md-block"> 
+          <a href="#" class="press-block__item press-item-big" style="background-image: url(img/main/press-1.png)">
+            <span class="press-item-big__content">
+              <span class="press-item-big__title">Заголовок свежей статьи пара строчек</span>
+              <span class="press-item-big__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+              <span class="press-item-big__meta">
+                <span class="press-item-big__meta-time">
+                  <span>25</span> минут назад
+                </span>
+                <span class="press-item-big__meta-comments">
+                  <svg class="ico">
+                    <use href="img/sprite.svg#ico-comment">
+                  </svg>
+                  <span>23</span>
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            {% for i in range(1, 5) %}
+              <div class="col-md-6 press-block__item-wrapper">
+                <a href="#" class="press-block__item press-item">
+                  <span class="press-item__title">Заголовок статьи пара строчек</span>
+                  <span class="press-item__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  </span>
+                  <span class="press-item__meta">
+                    <span class="press-item__meta-date">16.09.2020</span>
+                    <span class="press-item__meta-comments">
+                      <svg class="ico">
+                        <use href="img/sprite.svg#ico-comment">
+                      </svg>
+                      <span>23</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="press-block__button-wrapper">
+        <button class="btn press-block__button w-100">Показать ещё</button>
+      </div>
+    </div>
+  </div>
+</section>

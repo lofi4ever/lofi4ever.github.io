@@ -1,0 +1,43 @@
+.title {
+  font-size: 6.8rem;
+  line-height: 6.8rem;
+  color: $c-text;
+  font-weight: 700;
+  &--white {
+    color: $c-semi-gray;
+  }
+  @include respond-below(md) {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    &--md-center {
+      text-align: center;
+    }
+  }
+}
+
+.title-md {
+  font-size: 5.4rem;
+  line-height: 5.4rem;
+  color: $c-text;
+  font-weight: 700;
+  &--white {
+    color: $c-semi-gray;
+  }
+  @include respond-below(md) {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+.description {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: $c-text;
+  &--white {
+    color: $c-semi-gray;
+  }
+  @include respond-below(md) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+}

@@ -1,0 +1,44 @@
+.goal-block {
+  @include respond-below(lg) {
+    margin-bottom: -1rem;
+    &__item {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.goal {
+  height: 56rem;
+  background-color: $c-text;
+  background-size: cover;
+  background-position: center;
+  color: $c-semi-gray;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 19rem 3rem 0;
+  &__content {
+    text-align: center;
+  }
+  &__icon {
+    color: $c-yellow;
+    width: 9rem;
+    height: 9rem;
+  }
+  &__text {
+    margin-top: 3rem;
+    line-height: 2rem;
+  }
+
+  @include respond-below(md) {
+    height: 29.2rem;
+    font-size: 1.6rem;
+    padding: 9.8rem 1rem 0;
+    &__icon {
+      width: 4.7rem;
+      height: 4.7rem;
+    }
+    &__text {
+      margin-top: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<section class="main-page__banner-section main-banner-section">
+  <div class="main-slider js__main-slider">
+    <div class="main-slider__slides js__slider-slides">
+      {% for i in range(1, 4) %}
+        <div class="main-slider__slide banner js__slider-slide {% if (i === 1) %}current{% endif %}">
+          <div class="banner__elements">
+            <div class="banner__stats-wrapper">
+              <div class="banner__stats stats">
+                {% for i in range(1, 5) %}
+                <div class="stats__item">
+                  <div class="stats__item-num">36</div>
+                  <div class="stats__item-text">Lorem ipsum lorem ipsum</div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="banner__bg" style="background-image: url(img/main/slide-{{i}}.jpg)">
+            
+            </div>
+          </div>
+
+          <div class="banner__container container">
+            <div class="row">
+              <div class="col-md-10 col-xl-7">
+                <div class="banner__content info-block">
+                  <div class="banner__count">
+                    <span class="banner__count-current js__main-slider-current"></span> /
+                    <span class="banner__count-total js__main-slider-total"></span>
+                  </div>
+                  <h2 class="info-block__title">Большой заголовок в две-три строчки максимум {{ i }}</h2>
+                  <div class="info-block__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                  <div class="info-block__button-wrapper">
+                    <a href="#" class="btn">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="main-slider__controls">
+      <button class="js__slider-prev main-slider__control main-slider__control--left">
+        <svg class="ico">
+          <use href="img/sprite.svg#ico-angle-left" />
+        </svg>
+      </button>
+      <button class="js__slider-next main-slider__control main-slider__control--right">
+        <svg class="ico">
+          <use href="img/sprite.svg#ico-angle-right" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+.popup-wide-wrapper {
+  .fancybox-slide {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .fancybox-slide--html .fancybox-close-small {
+    width: 9rem;
+    height: 9rem;
+    right: 33px;
+    top: 26px;
+  }
+
+  @include respond-below(md) {
+    .fancybox-slide {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .fancybox-slide--html .fancybox-close-small {
+      width: 7rem;
+      height: 7rem;
+      right: 0px;
+      top: 0px;
+    }
+  }
+}
+
+.popup {
+  width: 180rem;
+  max-width: 100%;
+  padding: 16rem 0 16rem;
+  &__header {
+    .form-block {
+      &__title, &__description {
+        text-align: center;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    padding: 8rem 0 8rem;
+  }
+}

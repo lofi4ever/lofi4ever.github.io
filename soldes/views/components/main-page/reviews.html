@@ -1,0 +1,31 @@
+<section class="main-page__reviews-section section">
+  <div class="section__inner container">
+    <div class="row no-gutters justify-content-between align-items-center section__title">
+      <div>
+        <h2 class="title">Отзывы</h2>
+      </div>
+      <div>
+        <a href="javascript:;" data-src="#popup-comment" data-base-class="popup-wide-wrapper" data-fancybox class="add-link">
+          <svg class="add-link__icon">
+            <use href="img/sprite.svg#ico-plus">        
+          </svg>
+          <span class="add-link__title">Оставить отзыв</span>
+        </a>
+      </div>
+    </div>
+    <div class="review-block">
+      {% for i in range(0, 4) %}
+      <div class="review-block__item review">
+        <img src="img/main/person-1.jpg" alt="person" class="review__img">
+        <div class="review__content">
+          <div class="review__name">Дмитрий Ластин</div>
+          <div class="review__position">Генеральный директор <br> ООО “Ромашка”</div>
+          <div class="review__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+.subscribe-block {
+  color: $c-semi-gray;
+  &__img {
+    display: block;
+    width: 46.7rem;
+    max-width: calc(100% - 3rem);
+  }
+  &__socials {
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .form{
+    &__submit-wrapper {
+      margin-top: 4.5rem;
+    }
+  }
+
+  @include respond-below(md) {
+    &__img {
+      margin: 0 auto 2.3rem;
+      width: 17.7rem;
+    }
+    &__socials {
+      margin-top: 5.4rem;
+    }
+    .form-block {
+      &__title, &__description {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div id="popup-{{props.id}}" class="popup" style="display: none;">
+  <div class="container">
+    <div class="popup__content form-block">
+      <div class="popup__header">
+        <div class="form-block__title title">{{props.title}}</div>
+        <div class="form-block__description">Оставьте ваши контактные данные и <br> оставьте отзыв</div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form class="subscribe-block__form form">
+            <div class="form__item input-line">
+              <input type="text" class="input-line__input">
+              <div class="input-line__placeholder">Ваше имя</div>
+            </div>
+            <div class="form__item input-line">
+              <input type="text" class="input-line__input">
+              <div class="input-line__placeholder">Телефон</div>
+            </div>
+            <div class="form__item input-line">
+              <input type="text" class="input-line__input">
+              <div class="input-line__placeholder">{{props.field}}</div>
+            </div>
+            <div class="form__submit-wrapper">
+              <button type="submit" class="btn btn--fill w-100">{{props.button}}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
