@@ -35,6 +35,6 @@
     "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
-    "swiper": "^5.4.2"
+    "swiper": "^6.5.1"
   }
 }
